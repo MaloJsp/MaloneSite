@@ -1,12 +1,18 @@
 const IPADRESS = 'http://localhost:3000/'
 let httpRequest = new XMLHttpRequest();
-//sendRequest("users");
+// localStorage.setItem("name","BOB")
 init()
-// httpRequest.open('GET', IPADRESS + "users", true);
-// console.log(IPADRESS + "users")
-// httpRequest.responseType = 'json';
-// httpRequest.send();
 
+// document.getElementById("SelectEleves").onchange = (val)=>{
+//     setNameLocalStorage(val)
+// }
+
+function setNameLocalStorage(name) {
+    console.log(name)
+    localStorage.setItem("name",name)
+}
+
+document.getElementById("SelectEleves").addEventListener("onchange")
 
 httpRequest.onreadystatechange = function() {
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
