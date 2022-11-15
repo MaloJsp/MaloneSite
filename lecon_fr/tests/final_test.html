@@ -43,7 +43,7 @@
 							<section id="one">
 								<div class="inner">
 									<header class="major">
-										<h1>Test Final</h1>
+										<h1 id="test">Test Final</h1>
 									</header>
 								</div>
 							</section>
@@ -59,6 +59,9 @@
 		<script src="../../assets/js/breakpoints.min.js"></script>
 		<script src="../../assets/js/util.js"></script>
 		<script src="../../assets/js/main.js"></script>
+		<script>
+			document.getElementById("test").innerHTML= localStorage.getItem("name")
+		</script>
 
 	</body>
 </html>
