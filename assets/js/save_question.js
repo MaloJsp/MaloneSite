@@ -25,8 +25,9 @@ const APIADRESS = "http://localhost:3000/"
 
 
 let btnSave = document.getElementById("save")
-let input = document.getElementById("lib")
+let input = document.getElementById("rep")
 input.onclick = function(){
+    console.log("truc")
     input.style.color = "white"
 }
 btnSave.onclick = function(){
