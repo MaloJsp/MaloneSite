@@ -42,9 +42,13 @@
 
 				<!-- Main -->
 					<div id="main">
-
-						<div id="user">Test Bonjour </div>
-
+						<div id="remplissage_question">
+							<label for="">Question</label>
+							<input type="text" name="question_lib" id="lib">
+							<label for="">Reponse</label>
+							<input type="text" name="question_rep" id="rep">
+							<button id="save">Save</button>
+						</div>
 					</div>
 			</div>
 
@@ -56,9 +60,8 @@
 			<script src="../assets/js/breakpoints.min.js"></script>
 			<script src="../assets/js/util.js"></script>
 			<script src="../assets/js/main.js"></script>
-            <script>
-                let a = document.getElementById("user")
-                a.innerHTML += localStorage.getItem("name")
-            </script>
+			<script src="../assets/js/save_question.js"></script>
+			<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 	</body>
+
 </html>

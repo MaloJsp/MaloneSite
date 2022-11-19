@@ -96,6 +96,7 @@
 			window.setTimeout(function() {
 				$body.removeClass('is-preload');
 			}, 100);
+			
 		});
 
 	// Clear transitioning state on unload/hide.
