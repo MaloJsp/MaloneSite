@@ -16,15 +16,7 @@ let httpRequest = new XMLHttpRequest();
 
 
 
-let btnSave = document.getElementById("save")
-btnSave.onclick = function(){
-  let input = document.getElementById("lib")
-  if (input.value == "TEST") {
-    input.style.color = "green"
-  }else{
-    input.style.color = "red"
-  }
-}
+
 
 
 // axios({
