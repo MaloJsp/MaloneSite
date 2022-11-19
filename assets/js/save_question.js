@@ -30,11 +30,24 @@ input.onclick = function(){
     console.log("truc")
     input.style.color = "white"
 }
+
+function testQuestion(rep,input){
+    if (input.value == rep) {
+        input.style.color = "green"
+      }else{
+        input.style.color = "red"
+      }
+}
+
+
 btnSave.onclick = function(){
   
-  if (input.value == "TEST") {
-    input.style.color = "green"
-  }else{
-    input.style.color = "red"
-  }
+    let input1 = document.getElementById("rep")
+    testQuestion("TEST",input1)
+//   if (input.value == "TEST") {
+//     input.style.color = "green"
+//   }else{
+//     input.style.color = "red"
+//   }
+  
 }
