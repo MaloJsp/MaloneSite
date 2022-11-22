@@ -1,12 +1,15 @@
 const cpt_question = 0
 
-fetch("questions.json")
+fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
 .then((rep) => rep.json())
-.then((data) => console.log(data))
+.then(function(data){
+    data.forEach(element => {
+        console.log(element)
+    });
+})
 
 
 
 
-function setQuestion(){
-    console.log("OK")
-}
+
+
