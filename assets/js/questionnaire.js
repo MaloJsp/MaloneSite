@@ -35,11 +35,13 @@ let numPronom
 let numTemp
 let numVerbe
 let verbe 
+let questionnaire = document.getElementById("Questionnaire")
+let input
+let lib
 
 fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
 .then((rep) => rep.json())
 .then(function(data){
-    console.log(data)
 
     for (let i = 0; i < 25; i++) {
         console.log(i)
@@ -50,6 +52,14 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
             verbe = data[numVerbe]
            console.log(TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")" )
            console.log("Réponse: " + getTemp(verbe,numTemp)[numPronom])
+            lib = document.createElement("label")
+            lib.innerHTML = TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
+            questionnaire.appendChild(lib)
+           input = document.createElement("input")
+           input.value = getTemp(verbe,numTemp)[numPronom]
+           input.style.color = "black"
+           questionnaire.appendChild(input)
+
         }
         if(i>=5 && i<10){
             numPronom=getRandomInt(6)
