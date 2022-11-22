@@ -1,4 +1,3 @@
-const cpt_question = 0
 const PRONOM = ["Je","Tu","Il","Nous","Vous","Ils"]
 const TEMPS = ["imparfait","passe-simple","futur","conditionnel: Si [...],","subjonctif: Que"]
 
@@ -147,19 +146,58 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
         }
         
     }
+    for (let index = 0; index < 25; index++) {
+        document.getElementById(index).onclick = function(){
+            document.getElementById(index).style.color = "black"
+        }
+        
+    }
     
 })
-
+let e
 document.getElementById("valide").onclick = function(){
     let value
+    e = document.getElementById("Resultats")
+    var child = e.lastElementChild; 
+        while (child) {
+            e.removeChild(child);
+            child = e.lastElementChild;
+        }
     for (let index = 0; index < tabRep.length; index++) {
         value = document.getElementById(index).value
-
+        console.log(value)
+        console.log(tabRep[index])
         tabRep[index]["valide"] = value == tabRep[index].rep
-        
+        if(value == tabRep[index].rep){
+            document.getElementById(index).style.color = "green"
+        }else{
+            document.getElementById(index).style.color = "red"
+        }
 
     }
+    let divRes = document.getElementById("Resultats")
+    let divTemp
+    let countValide
+    let pourcent = 0
+    for (let i = 0; i < 5; i++) {
+        divTemp = document.createElement("div")
+        countValide = 0
+        tabRep.forEach(element => {
+            if (element["temp"] == i){
+                if(element["valide"]){
+                    countValide++
+                }
+            }
+        });
+        pourcent = (countValide*100)/5
+        console.log(pourcent)
+        divTemp.innerText = "Vous avez " + pourcent + "% de réponses valide pour le temps: " + TEMPS[i]
+        divRes.appendChild(divTemp)
+        
+    }
+
 }
+
 
 //let numPronom=getRandomInt(6)
 //let numTemp=getRandomInt(5)
