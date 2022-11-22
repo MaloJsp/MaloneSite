@@ -23,7 +23,6 @@ function getRandomInt(max) {
             return verbe["passe_simple"]
             break;
 
-    
         case 2:
             return verbe["futur"]
             break;
@@ -39,22 +38,57 @@ function getRandomInt(max) {
     }
 }
 
+let tabRep = Array(25)
+
 fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
 .then((rep) => rep.json())
 .then(function(data){
 
     for (let i = 0; i < 10; i++) {
-            numPronom=getRandomInt(6)
-            numTemp=4
-            numVerbe=getRandomInt(data.length-1)
-            verbe = data[numVerbe]
-
-            lib = document.createElement("label")
-            lib.innerHTML = "Que " + PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
-            questionnaire.appendChild(lib)
-           input = document.createElement("input")
-           input.value = getTemp(verbe,numTemp)[numPronom]
-           input.style.color = "black"
-           questionnaire.appendChild(input)
+        numPronom=getRandomInt(6)
+        numTemp=4
+        numVerbe=getRandomInt(data.length-1)
+        verbe = data[numVerbe]
+       //console.log(TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")" )
+       //console.log("Réponse: " + getTemp(verbe,numTemp)[numPronom])
+       lib = document.createElement("label")
+        lib.innerHTML = TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
+        questionnaire.appendChild(lib)
+       input = document.createElement("input")
+       input.id = i
+       tabRep[i] = {
+        "temp": numTemp,
+        "rep": getTemp(verbe,numTemp)[numPronom]
+       }
+       input.style.color = "black"
+       questionnaire.appendChild(input)
+    }
+    for (let index = 0; index < 25; index++) {
+        document.getElementById(index).onclick = function(){
+            document.getElementById(index).style.color = "black"
         }
+        
+    }
 })
+let e
+document.getElementById("valide").onclick = function(){
+    let value
+    e = document.getElementById("Resultats")
+    var child = e.lastElementChild; 
+        while (child) {
+            e.removeChild(child);
+            child = e.lastElementChild;
+        }
+    for (let index = 0; index < tabRep.length; index++) {
+        value = document.getElementById(index).value
+        console.log(value)
+        console.log(tabRep[index])
+        tabRep[index]["valide"] = value == tabRep[index].rep
+        if(value == tabRep[index].rep){
+            document.getElementById(index).style.color = "green"
+        }else{
+            document.getElementById(index).style.color = "red"
+        }
+
+    }
+}
