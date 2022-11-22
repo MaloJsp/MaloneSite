@@ -156,6 +156,7 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
 })
 let e
 document.getElementById("valide").onclick = function(){
+    document.getElementById("valide").disabled =  true;
     let value
     e = document.getElementById("Resultats")
     var child = e.lastElementChild; 
