@@ -19,7 +19,7 @@ btnVerif.onclick = function(){
     testQuestion("définirons",input4)
     testQuestion("finiront",input5)
     testQuestion("haïrai",input6)
-    testQuestion("saurais",input7)
+    testQuestion("saurai",input7)
     testQuestion("prendront",input8)
     testQuestion("voudras",input9)
     testQuestion("sera",input10)
