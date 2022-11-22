@@ -56,7 +56,7 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
            //console.log(TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")" )
            //console.log("Réponse: " + getTemp(verbe,numTemp)[numPronom])
             lib = document.createElement("label")
-            lib.innerHTML = TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
+            lib.innerHTML = TEMPS[numTemp]+ ": " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
             lib.style.margin = "10px"
             questionnaire.appendChild(lib)
            input = document.createElement("input")
@@ -78,7 +78,7 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
            //console.log(TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")" )
            //console.log("Réponse: " + getTemp(verbe,numTemp)[numPronom])
            lib = document.createElement("label")
-            lib.innerHTML = TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
+            lib.innerHTML = TEMPS[numTemp]+ ": " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
             lib.style.margin = "10px"
             questionnaire.appendChild(lib)
            input = document.createElement("input")
@@ -99,7 +99,7 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
            //console.log(TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")" )
            //console.log("Réponse: " + getTemp(verbe,numTemp)[numPronom])
            lib = document.createElement("label")
-            lib.innerHTML = TEMPS[numTemp]+ " " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
+            lib.innerHTML = TEMPS[numTemp]+ ": " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
             lib.style.margin = "10px"
             questionnaire.appendChild(lib)
            input = document.createElement("input")
