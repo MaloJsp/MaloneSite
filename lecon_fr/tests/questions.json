@@ -369,7 +369,7 @@
         "ferez",
         "feront"
       ],
-      "conditionnel": [
+      "conditionnel: Si [...],": [
         "ferais",
         "ferais",
         "ferait",
@@ -377,7 +377,7 @@
         "feriez",
         "feraient"
       ],
-      "subjonctif": [
+      "subjonctif: Que": [
         "fasse",
         "fasses",
         "fasse",
