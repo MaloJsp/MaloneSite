@@ -56,7 +56,7 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
         lib.style.margin = "10px"
         questionnaire.appendChild(lib)
        input = document.createElement("input")
-       index.style.margin = "10px"
+       input.style.margin = "10px"
        input.id = i
        tabRep[i] = {
         "temp": numTemp,

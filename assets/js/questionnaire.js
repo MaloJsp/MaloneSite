@@ -208,7 +208,7 @@ document.getElementById("valide").onclick = function(){
     let link = document.createElement("a")
     link.href="../lecons/menu_lecons.html"
     link.innerText ="Retour aux leçons"
-    divRes.appendChild(link)
+    divRes.appendChild(link) 
 
 }
 

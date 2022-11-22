@@ -92,6 +92,5 @@ document.getElementById("valide").onclick = function(){
         }else{
             document.getElementById(index).style.color = "red"
         }
-
     }
 }
