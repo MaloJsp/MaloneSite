@@ -412,7 +412,7 @@
         "saurez",
         "sauront"
       ],
-      "conditionnel": [
+      "conditionnel: Si [...],": [
         "saurais",
         "saurais",
         "saurait",
@@ -420,7 +420,7 @@
         "sauriez",
         "sauraient"
       ],
-      "subjonctif": [
+      "subjonctif: Que": [
         "sache",
         "saches",
         "sache",
