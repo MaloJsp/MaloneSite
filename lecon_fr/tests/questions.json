@@ -213,5 +213,91 @@
         "vouliez",
         "veuillent"
       ]
+    },
+    {
+      "infinitif": "définir",
+      "imparfait": [
+        "définissais",
+        "définissais",
+        "définissait",
+        "définissions",
+        "définissiez",
+        "définissaient"
+      ],
+      "passe_simple": [
+        "définis",
+        "définis",
+        "définit",
+        "définîmes",
+        "définîtes",
+        "définirent"
+      ],
+      "futur": [
+        "définirai",
+        "définiras",
+        "définira",
+        "définirons",
+        "définirez",
+        "définiront"
+      ],
+      "conditionnel": [
+        "définirais",
+        "définirais",
+        "définirait",
+        "définirions",
+        "définiriez",
+        "définiraient"
+      ],
+      "subjonctif": [
+        "définisse",
+        "définisses",
+        "définisse",
+        "définissions",
+        "définissiez",
+        "définissent"
+      ]
+    },
+    {
+      "infinitif": "réussir",
+      "imparfait": [
+        "réussissais",
+        "réussissais",
+        "réussissait",
+        "réussissions",
+        "réussissiez",
+        "réussissaient"
+      ],
+      "passe_simple": [
+        "réussis",
+        "réussis",
+        "réussit",
+        "réussîmes",
+        "réussîtes",
+        "réussirent"
+      ],
+      "futur": [
+        "réussirai",
+        "réussiras",
+        "réussira",
+        "réussirons",
+        "réussirez",
+        "réussiront"
+      ],
+      "conditionnel": [
+        "réussirais",
+        "réussirais",
+        "réussirait",
+        "réussirions",
+        "réussiriez",
+        "réussiraient"
+      ],
+      "subjonctif": [
+        "réussisse",
+        "réussisses",
+        "réussisse",
+        "réussissions",
+        "réussissiez",
+        "réussissent"
+      ]
     }
   ]
