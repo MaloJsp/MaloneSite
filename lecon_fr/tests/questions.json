@@ -299,5 +299,134 @@
         "réussissiez",
         "réussissent"
       ]
+    },
+    {
+      "infinitif": "prendre",
+      "imparfait": [
+        "prenais",
+        "prenais",
+        "prenait",
+        "prenions",
+        "preniez",
+        "prenaient"
+      ],
+      "passe_simple": [
+        "pris",
+        "pris",
+        "prit",
+        "prîmes",
+        "prîtes",
+        "prirent"
+      ],
+      "futur": [
+        "prendrai",
+        "prendras",
+        "prendra",
+        "prendrons",
+        "prendrez",
+        "prendront"
+      ],
+      "conditionnel": [
+        "prendrais",
+        "prendrais",
+        "prendrait",
+        "prendrions",
+        "prendriez",
+        "prendraient"
+      ],
+      "subjonctif": [
+        "prenne",
+        "prennes",
+        "prenne",
+        "prenions",
+        "preniez",
+        "prennent"
+      ]
+    },
+    {
+      "infinitif": "faire",
+      "imparfait": [
+        "faisais",
+        "faisais",
+        "faisait",
+        "faisions",
+        "faisiez",
+        "faisaient"
+      ],
+      "passe_simple": [
+        "fis",
+        "fis",
+        "fit",
+        "fîmes",
+        "fîtes",
+        "firent"
+      ],
+      "futur": [
+        "ferai",
+        "feras",
+        "fera",
+        "ferons",
+        "ferez",
+        "feront"
+      ],
+      "conditionnel": [
+        "ferais",
+        "ferais",
+        "ferait",
+        "ferions",
+        "feriez",
+        "feraient"
+      ],
+      "subjonctif": [
+        "fasse",
+        "fasses",
+        "fasse",
+        "fassions",
+        "fassiez",
+        "fassent"
+      ]
+    },
+    {
+      "infinitif": "savoir",
+      "imparfait": [
+        "savais",
+        "savais",
+        "savait",
+        "savions",
+        "saviez",
+        "savaient"
+      ],
+      "passe_simple": [
+        "sus",
+        "sus",
+        "sut",
+        "sûmes",
+        "sûtes",
+        "surent"
+      ],
+      "futur": [
+        "saurai",
+        "sauras",
+        "saura",
+        "saurons",
+        "saurez",
+        "sauront"
+      ],
+      "conditionnel": [
+        "saurais",
+        "saurais",
+        "saurait",
+        "saurions",
+        "sauriez",
+        "sauraient"
+      ],
+      "subjonctif": [
+        "sache",
+        "saches",
+        "sache",
+        "sachions",
+        "sachiez",
+        "sachent"
+      ]
     }
   ]
