@@ -1,0 +1,89 @@
+[
+    {
+      "infinitif": "avoir",
+      "imparfait": [
+        "avais",
+        "avais",
+        "avait",
+        "avions",
+        "aviez",
+        "avaient"
+      ],
+      "passe_simple": [
+        "eus",
+        "eus",
+        "eut",
+        "eûmes",
+        "eûtes",
+        "eurent"
+      ],
+      "futur": [
+        "aurai",
+        "auras",
+        "aura",
+        "aurons",
+        "aurez",
+        "auront"
+      ],
+      "conditionnel": [
+        "aurais",
+        "aurais",
+        "aurait",
+        "aurions",
+        "auriez",
+        "auraient"
+      ],
+      "subjonctif": [
+        "aie",
+        "aies",
+        "ait",
+        "ayons",
+        "ayez",
+        "aient"
+      ]
+    },
+
+    {
+      "infinitif": "être",
+      "imparfait": [
+        "étais",
+        "étais",
+        "était",
+        "étions",
+        "étiez",
+        "étaient"
+      ],
+      "passe_simple": [
+        "fus",
+        "fus",
+        "fut",
+        "fûmes",
+        "fûtes",
+        "furent"
+      ],
+      "futur": [
+        "serai",
+        "seras",
+        "sera",
+        "serons",
+        "serez",
+        "seront"
+      ],
+      "conditionnel": [
+        "serais",
+        "serais",
+        "serait",
+        "serions",
+        "seriez",
+        "seraient"
+      ],
+      "subjonctif": [
+        "sois",
+        "sois",
+        "soit",
+        "soyons",
+        "soyez",
+        "soient"
+      ]
+    }
+  ]
