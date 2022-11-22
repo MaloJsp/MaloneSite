@@ -53,6 +53,7 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
        //console.log("Réponse: " + getTemp(verbe,numTemp)[numPronom])
        lib = document.createElement("label")
         lib.innerHTML = "Si [...], " + PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
+        lib.style.margin = "10px"
         questionnaire.appendChild(lib)
        input = document.createElement("input")
        input.id = i
@@ -61,7 +62,9 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
         "rep": getTemp(verbe,numTemp)[numPronom]
        }
        input.style.color = "black"
+       input.style.margin = "10px"
        questionnaire.appendChild(input)
+        
     }
     for (let index = 0; index < 25; index++) {
         document.getElementById(index).onclick = function(){

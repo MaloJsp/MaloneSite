@@ -53,8 +53,10 @@ fetch("https://malojsp.github.io/MaloneSite/lecon_fr/tests/questions.json")
        //console.log("Réponse: " + getTemp(verbe,numTemp)[numPronom])
        lib = document.createElement("label")
         lib.innerHTML = "Que " +PRONOM[numPronom] + " ("+ verbe["infinitif"] + ")"
+        lib.style.margin = "10px"
         questionnaire.appendChild(lib)
        input = document.createElement("input")
+       input.style.margin = "10px"
        input.id = i
        tabRep[i] = {
         "temp": numTemp,
