@@ -42,7 +42,6 @@
         "aient"
       ]
     },
-
     {
       "infinitif": "être",
       "imparfait": [
@@ -84,6 +83,135 @@
         "soyons",
         "soyez",
         "soient"
+      ]
+    },
+    {
+      "infinitif": "aller",
+      "imparfait": [
+        "allais",
+        "allais",
+        "allait",
+        "allions",
+        "alliez",
+        "allaient"
+      ],
+      "passe_simple": [
+        "allai",
+        "allas",
+        "alla",
+        "allâmes",
+        "allâtes",
+        "allèrent"
+      ],
+      "futur": [
+        "irai",
+        "iras",
+        "ira",
+        "irons",
+        "irez",
+        "iront"
+      ],
+      "conditionnel": [
+        "irais",
+        "irais",
+        "irait",
+        "irions",
+        "iriez",
+        "iraient"
+      ],
+      "subjonctif": [
+        "aille",
+        "ailles",
+        "aille",
+        "allions",
+        "alliez",
+        "aillent"
+      ]
+    },
+    {
+      "infinitif": "tenir",
+      "imparfait": [
+        "tenais",
+        "tenais",
+        "tenait",
+        "tenions",
+        "teniez",
+        "tenaient"
+      ],
+      "passe_simple": [
+        "tins",
+        "tins",
+        "tint",
+        "tînmes",
+        "tîntes",
+        "tinrent"
+      ],
+      "futur": [
+        "tiendrai",
+        "tiendras",
+        "tiendra",
+        "tiendrons",
+        "tiendrez",
+        "tiendront"
+      ],
+      "conditionnel": [
+        "tiendrais",
+        "tiendrais",
+        "tiendrait",
+        "tiendrions",
+        "tiendriez",
+        "tiendraient"
+      ],
+      "subjonctif": [
+        "tienne",
+        "tiennes",
+        "tienne",
+        "tenions",
+        "teniez",
+        "tiennent"
+      ]
+    },
+    {
+      "infinitif": "vouloir",
+      "imparfait": [
+        "voulais",
+        "voulais",
+        "voulait",
+        "voulions",
+        "vouliez",
+        "voulaient"
+      ],
+      "passe_simple": [
+        "voulus",
+        "voulus",
+        "voulut",
+        "voulûmes",
+        "voulûtes",
+        "voulurent"
+      ],
+      "futur": [
+        "voudrai",
+        "voudras",
+        "voudra",
+        "voudrons",
+        "voudrez",
+        "voudront"
+      ],
+      "conditionnel": [
+        "voudrais",
+        "voudrais",
+        "voudrait",
+        "voudrions",
+        "voudriez",
+        "voudraient"
+      ],
+      "subjonctif": [
+        "veuille",
+        "veuilles",
+        "veuille",
+        "voulions",
+        "vouliez",
+        "veuillent"
       ]
     }
   ]
