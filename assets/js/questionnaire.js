@@ -8,5 +8,5 @@ fetch("questions.json")
 
 
 function setQuestion(){
-
+    console.log("OK")
 }
