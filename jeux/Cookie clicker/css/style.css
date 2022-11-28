@@ -1,5 +1,10 @@
 @import url(https://fonts.googleapis.com/css?family=Kavoon);
 
+#test{
+  color: black;
+
+}
+
 body {
   background-image: url("../images/bgBlue.jpg");
   background-repeat: repeat;
