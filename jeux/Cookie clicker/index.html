@@ -1,194 +1,147 @@
+<!doctype html>
+<html lang="en">
 
-<!DOCTYPE HTML>
-<!--
-	Forty by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Malone</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../../assets/css/main.css" />
+<head>
 
-      <!-- Required meta tags -->
-    
-		<noscript><link rel="stylesheet" href="../../assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#005598">
+  <meta name="apple-mobile-web-app-title" content="Cookie-clicker">
+  <meta name="theme-color" content="#005598">
+  <link rel="apple-touch-icon" href="/images/icons/icon-152x152.png">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <!-- Spectre CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-exp.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/spectre.css/dist/spectre-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="manifest" href="manifest.json">
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Site Internet</strong> <span> par Malone</span></a>
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+  <title>Cookie clicker</title>
+  <meta name="Description" content="Just another cookie clicker app, nothing to see here">
 
-				<!-- Menu -->
-					<nav id="menu">
-						<ul class="links">
-							<li><a href="../../index.html">Index</a></li>
-							<li><a href="index.html">Cookie Clicker</a></li>
-							<li><a href="jeux/pangrush/pangrush.html">PangRush</a></li>
-							<li><a href="generic.html">Mine Sweeper</a></li>
-							<li><a href="./lecon_fr/lecon_fr.html">Leçon de Français</a></li>
-							<li><a href="users/user.html">Utilisateur</a></li>
-						</ul>
-					</nav>
+</head>
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Voici mon site internet</h1>
-							</header>
-							<div class="content">
-								<p>Tu peux y trouver différents jeux que j'ai moi-même codés voire inventés, <br>
-									ainsi que des cours et des exercices de conjugaison !</p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Découvrir</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+<script>
+  // CODELAB: Register service worker.
+  //if ('serviceWorker' in navigator) {
+  console.log(navigator);
+  if (navigator.serviceWorker) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js')
+                .then((reg) => {
+                  console.log('Service worker registered.', reg);
+                });
+      });
+  }
+</script>
 
-				<!-- Main -->
-					<div id="main">
-            <script>
-              // CODELAB: Register service worker.
-              //if ('serviceWorker' in navigator) {
-              console.log(navigator);
-              if (navigator.serviceWorker) {
-                  window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('service-worker.js')
-                            .then((reg) => {
-                              console.log('Service worker registered.', reg);
-                            });
-                  });
-              }
-            </script>
-            
-            <body id="test">
-              <div class="container">
-            
-                <header id="head" class="navbar">
-                  <section class="navbar-section" id="navcol">
-                    <span class="navbar-brand mr-2">Cookie clicker</span>
-                  </section>
-                  <section class="navbar-section">
-                    <div class="input-group input-inline">
-                      <i class="icon icon-plus"></i>
-                    </div>
-                  </section>
-                </header>
-            
-                <div class="columns mt-2" id="grille">
-                  <div class="column col-4"></div>
-                  <div class="column col-4"></div>
-                  <div class="column col-4"></div>
-                  <div class="column col-4"></div>
-                  <div class="column col-4"><img id="cookie" src="images/PerfectCookie.png" class="img-responsive" alt="cookie">
-                  </div>
-                  <div class="column col-4"></div>
-                  <div class="column col-4"></div>
-                  <div class="column col-4"></div>
-                  <div class="column col-4"></div>
-                </div>
-            
-                <div class="columns mt-2">
-                  <div class="column col-12">
-                    <button id="startButton">start</button>
-                  </div>
-                </div>
-            
-                <div id="state" class="columns mt-2 d-none">
-                  <div class="column col-6">
-                    <span id="score">0</span>
-                  </div>
-                  <div class="column col-6">
-                    <span id="time">15</span>
-                  </div>
-                </div>
-            
-                <table id="HOF">
-            
-                </table>
-            
-              </div>
-            
-              <div class="modal" id="modal-settings">
-                <a href="#close" class="modal-overlay" aria-label="Close"></a>
-                <div class="modal-container">
-                  <div class="modal-header">
-                    <a href="#close" class="btn btn-clear float-right" aria-label="Close" id="closeModal"></a>
-                    <div class="modal-title h5">Settings</div>
-                  </div>
-                  <div class="modal-body">
-                    <div class="content">
-                      <div class="form-group">
-                        <label class="form-label">Background</label>
-                        <input class="form-input" type="color" id="backgroundColor">
-                      </div>
-                      <div class="form-group">
-                        <label class="form-label">Difficulty</label>
-                        <label class="form-radio">
-                          <input type="radio" name="level" value="3" id="ez" checked>
-                          <i class="form-icon"></i> easy
-                        </label>
-                        <label class="form-radio">
-                          <input type="radio" name="level" value="2" id="med">
-                          <i class="form-icon"></i> medium
-                        </label>
-                        <label class="form-radio">
-                          <input type="radio" name="level" value="1" id="ard">
-                          <i class="form-icon"></i> hard
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <div class="modal" id="modal-share">
-                <a href="#close" class="modal-overlay" aria-label="Close"></a>
-                <div class="modal-container">
-                  <div class="modal-header">
-                    <a href="#close" methods="get" class="btn btn-clear float-right" aria-label="Close" id="closeShareMod"></a>
-                    <div class="modal-title h5">Game over</div>
-                  </div>
-                  <div class="modal-body">
-                    <div class="content">
-                      <p>
-                        <img src="images/GrandmaIconLarge.png" alt="Grandma">
-                        <span id="click-count"></span> clicks in 15 seconds, not that bad kid!
-                        <form id="sendBut">
-                          <span>Saissez votre pseudo </span>
-                          <input type="text" pattern="[a-z0-9]{1,7}" name="pseudo" id="pseudoInput">
-                          <input type="submit">
-                        </form>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            
-              <script src="js/script.js"></script>
-						
-			</div>
+<body>
+  <div class="container">
 
-		<!-- Scripts -->
-			<script src="../../assets/js/jquery.min.js"></script>
-			<script src="../../assets/js/jquery.scrolly.min.js"></script>
-			<script src="../../assets/js/jquery.scrollex.min.js"></script>
-			<script src="../../assets/js/browser.min.js"></script>
-			<script src="../../assets/js/breakpoints.min.js"></script>
-			<script src="../../assets/js/util.js"></script>
-			<script src="../../assets/js/main.js"></script>
+    <header class="navbar">
+      <section class="navbar-section" id="navcol">
+        <span class="navbar-brand mr-2">Cookie clicker</span>
+      </section>
+      <section class="navbar-section">
+        <div class="input-group input-inline">
+          <i class="icon icon-plus"></i>
+        </div>
+      </section>
+    </header>
 
-	</body>
+    <div class="columns mt-2" id="grille">
+      <div class="column col-4"></div>
+      <div class="column col-4"></div>
+      <div class="column col-4"></div>
+      <div class="column col-4"></div>
+      <div class="column col-4"><img id="cookie" src="images/PerfectCookie.png" class="img-responsive" alt="cookie">
+      </div>
+      <div class="column col-4"></div>
+      <div class="column col-4"></div>
+      <div class="column col-4"></div>
+      <div class="column col-4"></div>
+    </div>
+
+    <div class="columns mt-2">
+      <div class="column col-12">
+        <button id="startButton">start</button>
+      </div>
+    </div>
+
+    <div id="state" class="columns mt-2 d-none">
+      <div class="column col-6">
+        <span id="score">0</span>
+      </div>
+      <div class="column col-6">
+        <span id="time">15</span>
+      </div>
+    </div>
+
+    <table id="HOF">
+
+    </table>
+
+  </div>
+
+  <div class="modal" id="modal-settings">
+    <a href="#close" class="modal-overlay" aria-label="Close"></a>
+    <div class="modal-container">
+      <div class="modal-header">
+        <a href="#close" class="btn btn-clear float-right" aria-label="Close" id="closeModal"></a>
+        <div class="modal-title h5">Settings</div>
+      </div>
+      <div class="modal-body">
+        <div class="content">
+          <div class="form-group">
+            <label class="form-label">Background</label>
+            <input class="form-input" type="color" id="backgroundColor">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Difficulty</label>
+            <label class="form-radio">
+              <input type="radio" name="level" value="3" id="ez" checked>
+              <i class="form-icon"></i> easy
+            </label>
+            <label class="form-radio">
+              <input type="radio" name="level" value="2" id="med">
+              <i class="form-icon"></i> medium
+            </label>
+            <label class="form-radio">
+              <input type="radio" name="level" value="1" id="ard">
+              <i class="form-icon"></i> hard
+            </label>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-share">
+    <a href="#close" class="modal-overlay" aria-label="Close"></a>
+    <div class="modal-container">
+      <div class="modal-header">
+        <a href="#close" methods="get" class="btn btn-clear float-right" aria-label="Close" id="closeShareMod"></a>
+        <div class="modal-title h5">Game over</div>
+      </div>
+      <div class="modal-body">
+        <div class="content">
+          <p>
+            <img src="images/GrandmaIconLarge.png" alt="Grandma">
+            <span id="click-count"></span> clicks in 15 seconds, not that bad kid!
+            <form id="sendBut">
+              <span>Saissez votre pseudo </span>
+              <input type="text" pattern="[a-z0-9]{1,7}" name="pseudo" id="pseudoInput">
+              <input type="submit">
+            </form>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
 </html>
