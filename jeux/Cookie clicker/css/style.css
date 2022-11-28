@@ -1,9 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Kavoon);
 
-body {
+body#test {
   background-image: url("../images/bgBlue.jpg");
   background-repeat: repeat;
-  font-family: Kavoon;
   font-size: 24px;
 }
 
@@ -40,16 +39,7 @@ span#time {
   color: white;
 }
 
-button {
-  display: block;
-  width: 100%;
-  font-family: Kavoon;
-  font-size: 24px;
-  background-color: white;
-  padding: 9px;
-  border-radius: 10px;
-  border-width: 0;
-}
+
 
 [alt="Grandma"] {
   display: block;
