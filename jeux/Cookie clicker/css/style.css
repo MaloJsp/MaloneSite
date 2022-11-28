@@ -12,7 +12,7 @@ body#test {
   touch-action: none;
 }
 
-header {
+header#head {
   padding: 12px;
   background: black;
   color: white;
