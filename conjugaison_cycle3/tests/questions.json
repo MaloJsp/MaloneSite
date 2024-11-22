@@ -1,0 +1,862 @@
+[
+    {
+      "infinitif": "avoir",
+      "imparfait": [
+        "avais",
+        "avais",
+        "avait",
+        "avions",
+        "aviez",
+        "avaient"
+      ],
+      "passe_simple": [
+        "eus",
+        "eus",
+        "eut",
+        "eûmes",
+        "eûtes",
+        "eurent"
+      ],
+      "futur": [
+        "aurai",
+        "auras",
+        "aura",
+        "aurons",
+        "aurez",
+        "auront"
+      ],
+      "conditionnel": [
+        "aurais",
+        "aurais",
+        "aurait",
+        "aurions",
+        "auriez",
+        "auraient"
+      ],
+      "subjonctif": [
+        "aie",
+        "aies",
+        "ait",
+        "ayons",
+        "ayez",
+        "aient"
+      ]
+    },
+    {
+      "infinitif": "être",
+      "imparfait": [
+        "étais",
+        "étais",
+        "était",
+        "étions",
+        "étiez",
+        "étaient"
+      ],
+      "passe_simple": [
+        "fus",
+        "fus",
+        "fut",
+        "fûmes",
+        "fûtes",
+        "furent"
+      ],
+      "futur": [
+        "serai",
+        "seras",
+        "sera",
+        "serons",
+        "serez",
+        "seront"
+      ],
+      "conditionnel": [
+        "serais",
+        "serais",
+        "serait",
+        "serions",
+        "seriez",
+        "seraient"
+      ],
+      "subjonctif": [
+        "sois",
+        "sois",
+        "soit",
+        "soyons",
+        "soyez",
+        "soient"
+      ]
+    },
+    {
+      "infinitif": "aller",
+      "imparfait": [
+        "allais",
+        "allais",
+        "allait",
+        "allions",
+        "alliez",
+        "allaient"
+      ],
+      "passe_simple": [
+        "allai",
+        "allas",
+        "alla",
+        "allâmes",
+        "allâtes",
+        "allèrent"
+      ],
+      "futur": [
+        "irai",
+        "iras",
+        "ira",
+        "irons",
+        "irez",
+        "iront"
+      ],
+      "conditionnel": [
+        "irais",
+        "irais",
+        "irait",
+        "irions",
+        "iriez",
+        "iraient"
+      ],
+      "subjonctif": [
+        "aille",
+        "ailles",
+        "aille",
+        "allions",
+        "alliez",
+        "aillent"
+      ]
+    },
+    {
+      "infinitif": "tenir",
+      "imparfait": [
+        "tenais",
+        "tenais",
+        "tenait",
+        "tenions",
+        "teniez",
+        "tenaient"
+      ],
+      "passe_simple": [
+        "tins",
+        "tins",
+        "tint",
+        "tînmes",
+        "tîntes",
+        "tinrent"
+      ],
+      "futur": [
+        "tiendrai",
+        "tiendras",
+        "tiendra",
+        "tiendrons",
+        "tiendrez",
+        "tiendront"
+      ],
+      "conditionnel": [
+        "tiendrais",
+        "tiendrais",
+        "tiendrait",
+        "tiendrions",
+        "tiendriez",
+        "tiendraient"
+      ],
+      "subjonctif": [
+        "tienne",
+        "tiennes",
+        "tienne",
+        "tenions",
+        "teniez",
+        "tiennent"
+      ]
+    },
+    {
+      "infinitif": "vouloir",
+      "imparfait": [
+        "voulais",
+        "voulais",
+        "voulait",
+        "voulions",
+        "vouliez",
+        "voulaient"
+      ],
+      "passe_simple": [
+        "voulus",
+        "voulus",
+        "voulut",
+        "voulûmes",
+        "voulûtes",
+        "voulurent"
+      ],
+      "futur": [
+        "voudrai",
+        "voudras",
+        "voudra",
+        "voudrons",
+        "voudrez",
+        "voudront"
+      ],
+      "conditionnel": [
+        "voudrais",
+        "voudrais",
+        "voudrait",
+        "voudrions",
+        "voudriez",
+        "voudraient"
+      ],
+      "subjonctif": [
+        "veuille",
+        "veuilles",
+        "veuille",
+        "voulions",
+        "vouliez",
+        "veuillent"
+      ]
+    },
+    {
+      "infinitif": "définir",
+      "imparfait": [
+        "définissais",
+        "définissais",
+        "définissait",
+        "définissions",
+        "définissiez",
+        "définissaient"
+      ],
+      "passe_simple": [
+        "définis",
+        "définis",
+        "définit",
+        "définîmes",
+        "définîtes",
+        "définirent"
+      ],
+      "futur": [
+        "définirai",
+        "définiras",
+        "définira",
+        "définirons",
+        "définirez",
+        "définiront"
+      ],
+      "conditionnel": [
+        "définirais",
+        "définirais",
+        "définirait",
+        "définirions",
+        "définiriez",
+        "définiraient"
+      ],
+      "subjonctif": [
+        "définisse",
+        "définisses",
+        "définisse",
+        "définissions",
+        "définissiez",
+        "définissent"
+      ]
+    },
+    {
+      "infinitif": "réussir",
+      "imparfait": [
+        "réussissais",
+        "réussissais",
+        "réussissait",
+        "réussissions",
+        "réussissiez",
+        "réussissaient"
+      ],
+      "passe_simple": [
+        "réussis",
+        "réussis",
+        "réussit",
+        "réussîmes",
+        "réussîtes",
+        "réussirent"
+      ],
+      "futur": [
+        "réussirai",
+        "réussiras",
+        "réussira",
+        "réussirons",
+        "réussirez",
+        "réussiront"
+      ],
+      "conditionnel": [
+        "réussirais",
+        "réussirais",
+        "réussirait",
+        "réussirions",
+        "réussiriez",
+        "réussiraient"
+      ],
+      "subjonctif": [
+        "réussisse",
+        "réussisses",
+        "réussisse",
+        "réussissions",
+        "réussissiez",
+        "réussissent"
+      ]
+    },
+    {
+      "infinitif": "prendre",
+      "imparfait": [
+        "prenais",
+        "prenais",
+        "prenait",
+        "prenions",
+        "preniez",
+        "prenaient"
+      ],
+      "passe_simple": [
+        "pris",
+        "pris",
+        "prit",
+        "prîmes",
+        "prîtes",
+        "prirent"
+      ],
+      "futur": [
+        "prendrai",
+        "prendras",
+        "prendra",
+        "prendrons",
+        "prendrez",
+        "prendront"
+      ],
+      "conditionnel": [
+        "prendrais",
+        "prendrais",
+        "prendrait",
+        "prendrions",
+        "prendriez",
+        "prendraient"
+      ],
+      "subjonctif": [
+        "prenne",
+        "prennes",
+        "prenne",
+        "prenions",
+        "preniez",
+        "prennent"
+      ]
+    },
+    {
+      "infinitif": "faire",
+      "imparfait": [
+        "faisais",
+        "faisais",
+        "faisait",
+        "faisions",
+        "faisiez",
+        "faisaient"
+      ],
+      "passe_simple": [
+        "fis",
+        "fis",
+        "fit",
+        "fîmes",
+        "fîtes",
+        "firent"
+      ],
+      "futur": [
+        "ferai",
+        "feras",
+        "fera",
+        "ferons",
+        "ferez",
+        "feront"
+      ],
+      "conditionnel": [
+        "ferais",
+        "ferais",
+        "ferait",
+        "ferions",
+        "feriez",
+        "feraient"
+      ],
+      "subjonctif": [
+        "fasse",
+        "fasses",
+        "fasse",
+        "fassions",
+        "fassiez",
+        "fassent"
+      ]
+    },
+    {
+      "infinitif": "savoir",
+      "imparfait": [
+        "savais",
+        "savais",
+        "savait",
+        "savions",
+        "saviez",
+        "savaient"
+      ],
+      "passe_simple": [
+        "sus",
+        "sus",
+        "sut",
+        "sûmes",
+        "sûtes",
+        "surent"
+      ],
+      "futur": [
+        "saurai",
+        "sauras",
+        "saura",
+        "saurons",
+        "saurez",
+        "sauront"
+      ],
+      "conditionnel": [
+        "saurais",
+        "saurais",
+        "saurait",
+        "saurions",
+        "sauriez",
+        "sauraient"
+      ],
+      "subjonctif": [
+        "sache",
+        "saches",
+        "sache",
+        "sachions",
+        "sachiez",
+        "sachent"
+      ]
+    },
+    {
+      "infinitif": "devoir",
+      "imparfait": [
+        "devais",
+        "devais",
+        "devait",
+        "devions",
+        "deviez",
+        "devaient"
+      ],
+      "passe_simple": [
+        "dus",
+        "dus",
+        "dut",
+        "dûmes",
+        "dûtes",
+        "durent"
+      ],
+      "futur": [
+        "devrai",
+        "devras",
+        "devra",
+        "devrons",
+        "devrez",
+        "devront"
+      ],
+      "conditionnel": [
+        "devrais",
+        "devrais",
+        "devrait",
+        "devrions",
+        "devriez",
+        "devraient"
+      ],
+      "subjonctif": [
+        "doive",
+        "doives",
+        "doive",
+        "devions",
+        "deviez",
+        "doivent"
+      ]
+    },
+    {
+      "infinitif": "aboutir",
+      "imparfait": [
+        "aboutissais",
+        "aboutissais",
+        "aboutissait",
+        "aboutissions",
+        "aboutissiez",
+        "aboutissaient"
+      ],
+      "passe_simple": [
+        "aboutis",
+        "aboutis",
+        "aboutit",
+        "aboutîmes",
+        "aboutîtes",
+        "aboutirent"
+      ],
+      "futur": [
+        "aboutirai",
+        "aboutiras",
+        "aboutira",
+        "aboutirons",
+        "aboutirez",
+        "aboutiront"
+      ],
+      "conditionnel": [
+        "aboutirais",
+        "aboutirais",
+        "aboutirait",
+        "aboutirions",
+        "aboutiriez",
+        "aboutiraient"
+      ],
+      "subjonctif": [
+        "aboutisse",
+        "aboutisses",
+        "aboutisse",
+        "aboutissions",
+        "aboutissiez",
+        "aboutissent"
+      ]
+    },
+    {
+      "infinitif": "agir",
+      "imparfait": [
+        "agissais",
+        "agissais",
+        "agissait",
+        "agissions",
+        "agissiez",
+        "agissaient"
+      ],
+      "passe_simple": [
+        "agis",
+        "agis",
+        "agit",
+        "agîmes",
+        "agîtes",
+        "agirent"
+      ],
+      "futur": [
+        "agirai",
+        "agiras",
+        "agira",
+        "agirons",
+        "agirez",
+        "agiront"
+      ],
+      "conditionnel": [
+        "agirais",
+        "agirais",
+        "agirait",
+        "agirions",
+        "agiriez",
+        "agiraient"
+      ],
+      "subjonctif": [
+        "agisse",
+        "agisses",
+        "agisse",
+        "agissions",
+        "agissiez",
+        "agissent"
+      ]
+    },
+    {
+      "infinitif": "subir",
+      "imparfait": [
+        "subissais",
+        "subissais",
+        "subissait",
+        "subissions",
+        "subissiez",
+        "subissaient"
+      ],
+      "passe_simple": [
+        "subis",
+        "subis",
+        "subit",
+        "subîmes",
+        "subîtes",
+        "subirent"
+      ],
+      "futur": [
+        "subirai",
+        "subiras",
+        "subira",
+        "subirons",
+        "subirez",
+        "subiront"
+      ],
+      "conditionnel": [
+        "subirais",
+        "subirais",
+        "subirait",
+        "subirions",
+        "subiriez",
+        "subiraient"
+      ],
+      "subjonctif": [
+        "subisse",
+        "subisses",
+        "subisse",
+        "subissions",
+        "subissiez",
+        "subissent"
+      ]
+    },
+    {
+      "infinitif": "ramener",
+      "imparfait": [
+        "ramenais",
+        "ramenais",
+        "ramenait",
+        "ramenions",
+        "rameniez",
+        "ramenaient"
+      ],
+      "passe_simple": [
+        "ramenai",
+        "ramenas",
+        "ramena",
+        "ramenâmes",
+        "ramenâtes",
+        "ramenèrent"
+      ],
+      "futur": [
+        "ramènerai",
+        "ramèneras",
+        "ramènera",
+        "ramènerons",
+        "ramènerez",
+        "ramèneront"
+      ],
+      "conditionnel": [
+        "ramènerais",
+        "ramènerais",
+        "ramènerait",
+        "ramènerions",
+        "ramèneriez",
+        "ramèneraient"
+      ],
+      "subjonctif": [
+        "ramène",
+        "ramènes",
+        "ramène",
+        "ramenions",
+        "rameniez",
+        "ramènent"
+      ]
+    },
+    {
+      "infinitif": "jeter",
+      "imparfait": [
+        "jetais",
+        "jetais",
+        "jetait",
+        "jetions",
+        "jetiez",
+        "jetaient"
+      ],
+      "passe_simple": [
+        "jetai",
+        "jetas",
+        "jeta",
+        "jetâmes",
+        "jetâtes",
+        "jetèrent"
+      ],
+      "futur": [
+        "jetterai",
+        "jetteras",
+        "jettera",
+        "jetterons",
+        "jetterez",
+        "jetteront"
+      ],
+      "conditionnel": [
+        "jetterais",
+        "jetterais",
+        "jetterait",
+        "jetterions",
+        "jetteriez",
+        "jetteraient"
+      ],
+      "subjonctif": [
+        "jette",
+        "jettes",
+        "jette",
+        "jetions",
+        "jetiez",
+        "jettent"
+      ]
+    },
+    {
+      "infinitif": "peser",
+      "imparfait": [
+        "pesais",
+        "pesais",
+        "pesait",
+        "pesions",
+        "pesiez",
+        "pesaient"
+      ],
+      "passe_simple": [
+        "pesai",
+        "pesas",
+        "pesa",
+        "pesâmes",
+        "pesâtes",
+        "pesèrent"
+      ],
+      "futur": [
+        "pèserai",
+        "pèseras",
+        "pèsera",
+        "pèserons",
+        "pèserez",
+        "pèseront"
+      ],
+      "conditionnel": [
+        "pèserais",
+        "pèserais",
+        "pèserait",
+        "pèserions",
+        "pèseriez",
+        "pèseraient"
+      ],
+      "subjonctif": [
+        "pèse",
+        "pèses",
+        "pèse",
+        "pesions",
+        "pesiez",
+        "pèsent"
+      ]
+    },
+    {
+      "infinitif": "promener",
+      "imparfait": [
+        "promenais",
+        "promenais",
+        "promenait",
+        "promenions",
+        "promeniez",
+        "promenaient"
+      ],
+      "passe_simple": [
+        "promenai",
+        "promenas",
+        "promena",
+        "promenâmes",
+        "promenâtes",
+        "promenèrent"
+      ],
+      "futur": [
+        "promènerai",
+        "promèneras",
+        "promènera",
+        "promènerons",
+        "promènerez",
+        "promèneront"
+      ],
+      "conditionnel": [
+        "promènerais",
+        "promènerais",
+        "promènerait",
+        "promènerions",
+        "promèneriez",
+        "promèneraient"
+      ],
+      "subjonctif": [
+        "promène",
+        "promènes",
+        "promène",
+        "promenions",
+        "promeniez",
+        "promènent"
+      ]
+    },
+    {
+      "infinitif": "pouvoir",
+      "imparfait": [
+        "pouvais",
+        "pouvais",
+        "pouvait",
+        "pouvions",
+        "pouviez",
+        "pouvaient"
+      ],
+      "passe_simple": [
+        "pus",
+        "pus",
+        "put",
+        "pûmes",
+        "pûtes",
+        "purent"
+      ],
+      "futur": [
+        "pourrai",
+        "pourras",
+        "pourra",
+        "pourrons",
+        "pourrez",
+        "pourront"
+      ],
+      "conditionnel": [
+        "pourrais",
+        "pourrais",
+        "pourrait",
+        "pourrions",
+        "pourriez",
+        "pourraient"
+      ],
+      "subjonctif": [
+        "puisse",
+        "puisses",
+        "puisse",
+        "puissions",
+        "puissiez",
+        "puissent"
+      ]
+    },
+    {
+      "infinitif": "venir",
+      "imparfait": [
+        "venais",
+        "venais",
+        "venait",
+        "venions",
+        "veniez",
+        "venaient"
+      ],
+      "passe_simple": [
+        "vins",
+        "vins",
+        "vint",
+        "vînmes",
+        "vîntes",
+        "vinrent"
+      ],
+      "futur": [
+        "viendrai",
+        "viendras",
+        "viendra",
+        "viendrons",
+        "viendrez",
+        "viendront"
+      ],
+      "conditionnel": [
+        "viendrais",
+        "viendrais",
+        "viendrait",
+        "viendrions",
+        "viendriez",
+        "viendraient"
+      ],
+      "subjonctif": [
+        "vienne",
+        "viennes",
+        "vienne",
+        "venions",
+        "veniez",
+        "viennent"
+      ]
+    }
+  ]
