@@ -33,26 +33,56 @@ let terminaisons = {
     ]
 }
 
-let radicaux = [
+let vb = [
     {
         vb: "tester",
         rad: "test",
         grp: 1,
-        grppas: 1
+        grpps: 1
     },
     {
-        vb: "mourir",
-        rad: "mour",
+        vb: "apercevoir",
+        rad: "aperç",
         grp: 3,
-        grppas: 4
+        grpps: 4
     }
 ]
 
 
 //Fonction qui récupere la terminaison dans le tableau (confort d'utilisation)
+//tp: temps, valeurs possibles: present,imparfait,futur,passe,conditionnel,imperatif
+//grp: groupe du verbe, valeurs possibles: 1,2,3 ( si au passé simple accepte aussi 4,5)
+//prsn: personne, valeurs possibles: de 1 à 6 
 function getTerminaison(tp,grp,prsn) {
     return (terminaisons[tp][grp-1][prsn-1])
 }
+
+// Fonction utilitaire qui genere un entier entre min et max
+function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Fonction qui renvoie un verbe aléatoire
+function getRandVb(){
+    return vb[getRandomInt(0,vb.length-1)]
+}
+
+//Fonction qui renvoie le verbe conjugué
+//vb: verbe ( mettre un verbe envoyé par la fonction getRandVb)
+//tp: temps, valeurs possibles: present,imparfait,futur,passe,conditionnel,imperatif
+//prsn: personne, valeurs possibles: de 1 à 6 
+function getConj(vb,tp,prsn){
+    let term
+    if (tp == "passe"){
+        console.log(tp)
+        term = getTerminaison(tp,vb.grpps,prsn)
+    }else{
+        term = getTerminaison(tp,vb.grp,prsn)
+    }
+    return vb.rad + term
+}
+console.log(getConj(getRandVb(),"passe",4))
+
 
 
 
