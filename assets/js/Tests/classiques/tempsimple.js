@@ -12,21 +12,23 @@ let terminaisons = [
     "futur" = [
         ["erai","eras","era","erons","erez","eront"],
         ["irai","iras","ira","irons","irez","iront"],
-        ["rai","ras","ra","rons","rez","ront"]
+        ["rai","ras","ra","rons","rez","ront="]
     ],
     "passe" = [
-        ["","","","","",""],
-        ["","","","","",""],
-        ["","","","","",""]
+        ["ai","as","a","âmes","âtes","èrent"],
+        ["is","is","it","îmes","îtes","irent"],    
+        ["is","is","it","îmes","îtes","irent"],
+        ["us","us","ut","ûmes","ûtes","urent"],
+        ["ins","ins","int","înmes","întes","inrent"]
     ],
     "conditionnel" = [
-        ["","","","","",""],
-        ["","","","","",""],
-        ["","","","","",""]
+        ["erais","erais","erait","erions","eriez","eraient"],
+        ["irais","irais","irait","irions","iriez","iraient"],
+        ["rais","rais","rait","rions","riez","raient"]
     ],
     "imperatif" = [
-        ["","","","","",""],
-        ["","","","","",""],
-        ["","","","","",""]
+        ["e","ons","ez"],
+        ["is","issons","issez"],
+        ["s","ons","ez"]
     ]
 ]
