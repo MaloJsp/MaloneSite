@@ -1,37 +1,37 @@
-let terminaisons = [
-    "present" = [
+let terminaisons = {
+    "present": [
         ["e","es","e","ons","ez","ent"],
         ["is","is","it","issons","issez","issent"],
         ["s","s","t","ons","ez","ent"]
     ],
-    "imparfait" = [
+    "imparfait": [
         ["ais","ais","ait","ions","iez","aient"],
         ["ais","ais","ait","ions","iez","aient"],
         ["ais","ais","ait","ions","iez","aient"]
     ],
-    "futur" = [
+    "futur": [
         ["erai","eras","era","erons","erez","eront"],
         ["irai","iras","ira","irons","irez","iront"],
         ["rai","ras","ra","rons","rez","ront="]
     ],
-    "passe" = [
+    "passe": [
         ["ai","as","a","âmes","âtes","èrent"],
         ["is","is","it","îmes","îtes","irent"],    
         ["is","is","it","îmes","îtes","irent"],
         ["us","us","ut","ûmes","ûtes","urent"],
         ["ins","ins","int","înmes","întes","inrent"]
     ],
-    "conditionnel" = [
+    "conditionnel": [
         ["erais","erais","erait","erions","eriez","eraient"],
         ["irais","irais","irait","irions","iriez","iraient"],
         ["rais","rais","rait","rions","riez","raient"]
     ],
-    "imperatif" = [
+    "imperatif": [
         ["e","ons","ez"],
         ["is","issons","issez"],
         ["s","ons","ez"]
     ]
-]
+}
 
 
 
