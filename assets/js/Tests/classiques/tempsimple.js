@@ -32,3 +32,13 @@ let terminaisons = [
         ["s","ons","ez"]
     ]
 ]
+
+
+
+
+
+function getTerminaison(tp,grp,prsn) {
+    console.log(terminaisons[tp][grp-1][prsn-1])
+}
+
+getTerminaison("imparfait",1,3)
