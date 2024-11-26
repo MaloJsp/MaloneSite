@@ -1,3 +1,5 @@
+import * as Displayer from "./displayer.js"
+
 let terminaisons = {
     "present": [
         ["e","es","e","ons","ez","ent"],
@@ -82,6 +84,7 @@ function getConj(vb,tp,prsn){
     return vb.rad + term
 }
 console.log(getConj(getRandVb(),"passe",4))
+Displayer.testdisp()
 
 
 
