@@ -33,12 +33,27 @@ let terminaisons = {
     ]
 }
 
+let radicaux = [
+    {
+        vb: "tester",
+        rad: "test",
+        grp: 1,
+        grppas: 1
+    },
+    {
+        vb: "mourir",
+        rad: "mour",
+        grp: 3,
+        grppas: 4
+    }
+]
 
 
-
-
+//Fonction qui récupere la terminaison dans le tableau (confort d'utilisation)
 function getTerminaison(tp,grp,prsn) {
-    console.log(terminaisons[tp][grp-1][prsn-1])
+    return (terminaisons[tp][grp-1][prsn-1])
 }
 
-getTerminaison("imparfait",1,3)
+
+
+
