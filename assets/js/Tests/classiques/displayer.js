@@ -14,3 +14,18 @@ function getMainBal(){
 export function testdisp(){
     getMainBal().innerText = "IT WORKS!!!"
 }
+
+export function displayQuest(vb,rep,id){
+    let mBal = getMainBal()
+    mBal.innerHTML += `
+        <div id="${rep+vb.rad}">
+            <label for="${rep}">
+               je ${vb.vb} 
+            </label>
+            <input type="text" name="${vb.vb}" id="${id}">
+        </div>
+    `
+}
+
+
+

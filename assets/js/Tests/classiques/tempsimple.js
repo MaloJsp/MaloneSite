@@ -83,8 +83,12 @@ function getConj(vb,tp,prsn){
     }
     return vb.rad + term
 }
-console.log(getConj(getRandVb(),"passe",4))
-Displayer.testdisp()
+
+
+// let verb = getRandVb()
+
+
+
 
 
 
