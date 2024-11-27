@@ -15,7 +15,7 @@ export function testdisp(){
     getMainBal().innerText = "IT WORKS!!!"
 }
 
-export function displayQuest(vb,rep,id){
+function displayQuest(vb,rep,id){
     let mBal = getMainBal()
     mBal.innerHTML += `
         <div id="${rep+vb.rad}">
@@ -27,5 +27,10 @@ export function displayQuest(vb,rep,id){
     `
 }
 
+// nb question exo classiques: 10
+//                       Test: 20
+export function displayExo(nbEx, lsvb, lsrep){
+    
+}
 
 
