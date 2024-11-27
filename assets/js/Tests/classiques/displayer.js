@@ -29,8 +29,16 @@ function displayQuest(vb,rep,id){
 
 // nb question exo classiques: 10
 //                       Test: 20
-export function displayExo(nbEx, lsvb, lsrep){
-    
+// [
+// {rep:[vb,prsn]}
+// ]
+export function displayExo(lsvb){
+    let count = 0
+    Object.entries(lsvb).forEach(([rep, verb]) => {
+        console.log(verb[0].vb)
+        count++;
+        displayQuest(verb[0], rep, count);
+    });
 }
 
 

@@ -84,6 +84,22 @@ function getConj(vb,tp,prsn){
     return vb.rad + term
 }
 
+function genTest(){
+    let tb={}
+    let conj
+    let vb
+    for (let index = 0; index < 2; index++) {
+        console.log("OK")
+        vb = getRandVb()
+        conj = getConj(vb,"passe",5)
+        tb[conj]=[vb,5]
+    }
+    return tb
+}
+
+let a = genTest()
+console.log(a)
+Displayer.displayExo(a)
 
 // let verb = getRandVb()
 
