@@ -30,12 +30,12 @@ function displayQuest(vb,rep,id){
 // nb question exo classiques: 10
 //                       Test: 20
 // [
-// {rep:[vb,prsn]}
+// {rep:[vb,prsn,tps]}
 // ]
 export function displayExo(lsvb){
     let count = 0
     Object.entries(lsvb).forEach(([rep, verb]) => {
-        console.log(verb[0].vb)
+        console.log(verb)
         count++;
         displayQuest(verb[0], rep, count);
     });

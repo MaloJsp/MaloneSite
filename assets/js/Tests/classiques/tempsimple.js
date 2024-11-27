@@ -76,7 +76,7 @@ function getRandVb(){
 function getConj(vb,tp,prsn){
     let term
     if (tp == "passe"){
-        console.log(tp)
+        // console.log(tp)
         term = getTerminaison(tp,vb.grpps,prsn)
     }else{
         term = getTerminaison(tp,vb.grp,prsn)
@@ -88,11 +88,13 @@ function genTest(){
     let tb={}
     let conj
     let vb
+    let tp
     for (let index = 0; index < 2; index++) {
         console.log("OK")
         vb = getRandVb()
         conj = getConj(vb,"passe",5)
-        tb[conj]=[vb,5]
+        tp = "passe"
+        tb[conj]=[vb,5,tp]
     }
     return tb
 }
