@@ -18,7 +18,7 @@ export function testdisp(){
 function displayQuest(vb,rep,id){
     let mBal = getMainBal()
     mBal.innerHTML += `
-        <div id="${rep+vb.rad}">
+        <div>
             <label for="${rep}">
                je ${vb.vb} 
             </label>
