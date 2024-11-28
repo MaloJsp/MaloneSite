@@ -84,6 +84,7 @@ function getConj(vb,tp,prsn){
     return vb.rad + term
 }
 
+// genere une liste pour les tests (pour l'instant que 2 pour tester)
 function genTest(){
     let tb={}
     let conj
@@ -105,7 +106,10 @@ Displayer.displayExo(a)
 
 // let verb = getRandVb()
 
-
+//Reste la fonction pour le résultat, reprendre en partie ce qui a été fait 
+// On affiche le resultat sur une pop up ( alert ou pop up  )
+//temps composé: il faudrait juste adapter les listes et adapter la fonction de traitement
+// Test de positionnement: affichage temps conseillé 
 
 
 
