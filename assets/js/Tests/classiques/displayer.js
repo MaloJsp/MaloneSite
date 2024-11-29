@@ -3,16 +3,21 @@ function getMainBal(){
     return document.getElementById("exo")
 }
 
+// Fonction utilitaire qui genere un entier entre min et max
+export function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 
 //Affichage d'une question des tests
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher ( voir autre manière gérer id)
 function displayQuest(vb,rep,id){
     let mBal = getMainBal()
-    displayPrsn()
+    let libPrsn = displayPrsn()
     mBal.innerHTML += `
         <div>
             <label for="${rep}">
-               je ${vb.vb} 
+               ${libPrsn} ${vb.vb} 
             </label>
             <input type="text" name="${vb.vb}" id="${id}">
         </div>
@@ -44,7 +49,42 @@ export function displayExo(lsvb){
 }
 
 function displayPrsn(vb){
-    console.log(vb)
+    let idPrsn = vb[1]
+    let libPrsn = ""
+    if (vb[1] == 3 || vb[1] == 6){
+        let rd = getRandomInt(0,1)
+    }
+    switch (idPrsn) {
+        case 1:
+            libPrsn = "Je"
+            break;
+        case 2:
+            libPrsn = "Je"
+            break;
+        case 3:
+            if (rd == 0){
+                libPrsn = "Elle"
+            }else{
+                libPrsn = "Il"
+            }
+            break;
+        case 4:
+            libPrsn = "Nous"
+            break;
+        case 5:
+            libPrsn = "Vous"
+            break;
+        case 6:
+            if (rd == 0){
+                libPrsn = "Elles"
+            }else{
+                libPrsn = "Ils"
+            }
+            break;
+        default:
+            break;
+    }
+    return libPrsn
 }
 
 

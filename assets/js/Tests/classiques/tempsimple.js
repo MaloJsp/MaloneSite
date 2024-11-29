@@ -59,14 +59,10 @@ function getTerminaison(tp,grp,prsn) {
     return (terminaisons[tp][grp-1][prsn-1])
 }
 
-// Fonction utilitaire qui genere un entier entre min et max
-function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 // Fonction qui renvoie un verbe aléatoire
 function getRandVb(){
-    return vb[getRandomInt(0,vb.length-1)]
+    return vb[Displayer.getRandomInt(0,vb.length-1)]
 }
 
 //Fonction qui renvoie le verbe conjugué
