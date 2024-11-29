@@ -50,7 +50,7 @@ export function displayExo(lsvb){
 }
 
 function displayPrsn(vb){
-    console.log("Vb PRSN: ",vb[1])
+    console.log("Vb PRSN: ",vb)
     let idPrsn = vb[1]
     let libPrsn = ""
     if (vb[1] == 3 || vb[1] == 6){
