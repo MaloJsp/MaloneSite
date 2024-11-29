@@ -3,9 +3,6 @@ function getMainBal(){
     return document.getElementById("exo")
 }
 
-// export function testdisp(){
-//     getMainBal().innerText = "IT WORKS!!!"
-// }
 
 //Affichage d'une question des tests
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher ( voir autre manière gérer id)
@@ -45,6 +42,9 @@ export function displayExo(lsvb){
     displayBtn()
 }
 
+function displayPrsn(vb){
+    console.log(vb)
+}
 
 
 
