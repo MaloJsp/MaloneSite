@@ -40,6 +40,7 @@ function displayBtn(){
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher
 export function displayExo(lsvb){
     let count = 0
+    
     Object.entries(lsvb).forEach(([rep, verb]) => {
         console.log(verb)
         count++;
@@ -49,6 +50,7 @@ export function displayExo(lsvb){
 }
 
 function displayPrsn(vb){
+    console.log("Vb PRSN: ",vb[1])
     let idPrsn = vb[1]
     let libPrsn = ""
     if (vb[1] == 3 || vb[1] == 6){
