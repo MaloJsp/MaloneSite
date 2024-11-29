@@ -6,4 +6,6 @@ Ce qu'il reste à faire:
     - Problème à régler = l'accord du participe passé
 
 Notes : 
-- plus besoin d'automatiser quoi que ce soit sur les verbes du troisième groupe : ils sont tous prêt dans un json
+- plus besoin d'automatiser quoi que ce soit sur les verbes du troisième groupe : ils sont tous prêt dans un json ( à voir car j'ai peur que ça ajoute du travail au niveau de la fonction d'interprétation " usine à gaz ")
+- Si obligatoire alors revoir entièrement le moteur de traitement du quizz
+
