@@ -13,7 +13,7 @@ export function getRandomInt(min, max) {
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher ( voir autre manière gérer id)
 function displayQuest(vb,rep,id){
     let mBal = getMainBal()
-    let libPrsn = displayPrsn()
+    let libPrsn = displayPrsn(vb)
     mBal.innerHTML += `
         <div>
             <label for="${rep}">
