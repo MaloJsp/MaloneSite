@@ -14,7 +14,7 @@ export function getRandomInt(min, max) {
 function displayQuest(vb,rep,id){
     let mBal = getMainBal()
     console.log(vb)
-    let libPrsn = displayPrsn(vb)
+    // let libPrsn = displayPrsn(vb)
     mBal.innerHTML += `
         <div>
             <label for="${rep}">
