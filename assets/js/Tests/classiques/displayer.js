@@ -8,6 +8,7 @@ function getMainBal(){
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher ( voir autre manière gérer id)
 function displayQuest(vb,rep,id){
     let mBal = getMainBal()
+    displayPrsn()
     mBal.innerHTML += `
         <div>
             <label for="${rep}">
