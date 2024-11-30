@@ -11,14 +11,13 @@ export function getRandomInt(min, max) {
 
 //Affichage d'une question des tests
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher ( voir autre manière gérer id)
-function displayQuest(vb,rep,id){
+function displayQuest(vb,rep,id,p){
     let mBal = getMainBal()
-    console.log(vb)
-    // let libPrsn = displayPrsn(vb)
+    let libPrsn = displayPrsn(p)
     mBal.innerHTML += `
         <div>
             <label for="${rep}">
-               ${id} ${vb.vb} 
+               ${libPrsn} ${vb.vb} 
             </label>
             <input type="text" name="${vb.vb}" id="${id}">
         </div>
@@ -41,22 +40,20 @@ function displayBtn(){
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher
 export function displayExo(lsvb){
     let count = 0
-    
+    // console.log(lsvb)
     Object.entries(lsvb).forEach(([rep, verb]) => {
-        console.log(verb)
+        // console.log(verb)
         count++;
-        displayQuest(verb[0], rep, count);
+        displayQuest(verb[0], rep, count,verb[3]);
     });
     displayBtn()
 }
 
 function displayPrsn(vb){
     console.log("Vb PRSN: ",vb)
-    let idPrsn = vb[1]
+    let idPrsn = vb
     let libPrsn = ""
-    if (vb[1] == 3 || vb[1] == 6){
-        let rd = getRandomInt(0,1)
-    }
+    let rd =  getRandomInt(0,1)
     switch (idPrsn) {
         case 1:
             libPrsn = "Je"
@@ -87,6 +84,7 @@ function displayPrsn(vb){
         default:
             break;
     }
+    console.log(libPrsn)
     return libPrsn
 }
 

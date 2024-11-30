@@ -50,7 +50,13 @@ let vb = [
     }
 ]
 
-
+window.onload = () => {
+    console.log("LOAD")
+    localStorage.setItem("temps",document.getElementById("exo").classList[0])
+    let a = genTest()
+    console.log(a)
+    Displayer.displayExo(a)
+}
 //Fonction qui récupere la terminaison dans le tableau (confort d'utilisation)
 //tp: temps, valeurs possibles: present,imparfait,futur,passe,conditionnel,imperatif
 //grp: groupe du verbe, valeurs possibles: 1,2,3 ( si au passé simple accepte aussi 4,5)
@@ -72,7 +78,6 @@ function getRandVb(){
 function getConj(vb,tp,prsn){
     let term
     if (tp == "passe"){
-        // console.log(tp)
         term = getTerminaison(tp,vb.grpps,prsn)
     }else{
         term = getTerminaison(tp,vb.grp,prsn)
@@ -86,19 +91,19 @@ function genTest(){
     let conj
     let vb
     let tp
+    let p
     for (let index = 0; index < 2; index++) {
+        p = Displayer.getRandomInt(1,6)
         console.log("OK")
         vb = getRandVb()
-        conj = getConj(vb,"passe",5)
-        tp = "passe"
-        tb[conj]=[vb,5,tp]
+        conj = getConj(vb,localStorage.getItem("temps"),p)
+        tp = localStorage.getItem("temps")
+        tb[conj]=[vb,5,tp,p]
     }
     return tb
 }
 
-let a = genTest()
-console.log(a)
-Displayer.displayExo(a)
+
 
 // let verb = getRandVb()
 
