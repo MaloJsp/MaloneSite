@@ -43,8 +43,8 @@ let vb = [
         grpps: 1
     },
     {
-        vb: "apercevoir",
-        rad: "aperç",
+        vb: "laver",
+        rad: "lav",
         grp: 3,
         grpps: 4
     }
