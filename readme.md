@@ -26,3 +26,5 @@ puis au début comment on fait ?
 Petit mot de conseil ? 
 Test de pos : Afficher vraie alerte ou pop up maison ? ( plus jolie pop up maison mais plus relou à faire ? et à  utiliser ?)
 
+afficher résultat de chaque questions
+

@@ -45,8 +45,20 @@ let vb = [
     {
         vb: "laver",
         rad: "lav",
-        grp: 3,
-        grpps: 4
+        grp: 1,
+        grpps: 1
+    },
+    {
+        vb: "couper",
+        rad: "coup",
+        grp: 1,
+        grpps: 1
+    },
+    {
+        vb: "saisir",
+        rad: "sais",
+        grp: 2,
+        grpps: 2
     }
 ]
 
