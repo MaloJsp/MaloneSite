@@ -876,11 +876,12 @@ let vb = [
 ]
 
 window.onload = () => {
-    console.log("LOAD")
+    // console.log("LOAD")
     localStorage.setItem("temps",document.getElementById("exo").classList[0])
     let a = genTest()
     console.log(a)
     Displayer.displayExo(a)
+    
 }
 //Fonction qui récupere la terminaison dans le tableau (confort d'utilisation)
 //tp: temps, valeurs possibles: present,imparfait,futur,passe,conditionnel,imperatif
@@ -902,11 +903,7 @@ function getRandVb(){
 //prsn: personne, valeurs possibles: de 1 à 6 
 function getConj(vb,tp,prsn){
     let term
-    if (tp == "passe"){
-        term = getTerminaison(tp,vb.grpps,prsn)
-    }else{
-        term = getTerminaison(tp,vb.grp,prsn)
-    }
+    term = getTerminaison(tp,vb.grp,prsn)
     return vb.rad + term
 }
 
@@ -917,7 +914,7 @@ function genTest(){
     let vb
     let tp
     let p
-    for (let index = 0; index < 2; index++) {
+    for (let index = 0; index < 10; index++) {
         p = Displayer.getRandomInt(1,6)
         console.log("OK")
         vb = getRandVb()

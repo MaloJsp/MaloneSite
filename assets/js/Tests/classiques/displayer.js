@@ -19,7 +19,7 @@ function displayQuest(vb,rep,id,p){
             <label for="${rep}">
                ${libPrsn} ${vb.vb} 
             </label>
-            <input type="text" name="${vb.vb}" id="${id}">
+            <input type="text" name="${vb.vb}" id=${id}>
         </div>
     `
 }
@@ -28,8 +28,17 @@ function displayQuest(vb,rep,id,p){
 function displayBtn(){
     let mBal = getMainBal()
     mBal.innerHTML += `
-            <input type="button" value="Correction" id="Vbtn">
+            <input type="button" value="Correction" id="Vbtn" >
     `
+    document.getElementById("Vbtn").onclick = () => {
+        let inp
+        let tab = []
+        for (let index = 1; index < 11; index++) {
+            inp = document.getElementById(index)
+            tab[index-1]=inp.value
+        }
+        localStorage.setItem("reponses",tab)
+    }
 }
 
 // nb question exo classiques: 10
