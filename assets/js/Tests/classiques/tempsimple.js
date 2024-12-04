@@ -922,6 +922,7 @@ function genTest(){
         tp = localStorage.getItem("temps")
         tb[conj]=[vb,5,tp,p]
     }
+    localStorage.setItem("corr",tb)
     return tb
 }
 
