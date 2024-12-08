@@ -37,7 +37,8 @@ function displayBtn(){
             inp = document.getElementById(index)
             tab[index-1]=inp.value
         }
-        localStorage.setItem("reponses",tab)
+        localStorage.setItem("reponses",JSON.stringify(tab))
+        verifRep()
     }
 }
 
@@ -49,9 +50,7 @@ function displayBtn(){
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher
 export function displayExo(lsvb){
     let count = 0
-    // console.log(lsvb)
     Object.entries(lsvb).forEach(([rep, verb]) => {
-        // console.log(verb)
         count++;
         displayQuest(verb[0], rep, count,verb[3]);
     });
@@ -59,7 +58,6 @@ export function displayExo(lsvb){
 }
 
 function displayPrsn(vb){
-    console.log("Vb PRSN: ",vb)
     let idPrsn = vb
     let libPrsn = ""
     let rd =  getRandomInt(0,1)
@@ -93,9 +91,23 @@ function displayPrsn(vb){
         default:
             break;
     }
-    console.log(libPrsn)
     return libPrsn
 }
+
+function verifRep(){
+    let inputs = JSON.parse(localStorage.getItem("reponses"))
+    let corr = JSON.parse(localStorage.getItem("corr"))
+    let count = 0
+    let tabCheck = []
+    Object.entries(corr).forEach(([rep, verb]) => {
+        tabCheck[count]=rep == inputs[count]
+        count++;
+
+    });
+
+    localStorage.setItem("chk",tabCheck)
+}
+
 
 
 

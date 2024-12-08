@@ -876,11 +876,10 @@ let vb = [
 ]
 
 window.onload = () => {
-    // console.log("LOAD")
     localStorage.setItem("temps",document.getElementById("exo").classList[0])
     let a = genTest()
-    console.log(a)
     Displayer.displayExo(a)
+    localStorage.setItem("reponses",[])
     
 }
 //Fonction qui récupere la terminaison dans le tableau (confort d'utilisation)
@@ -916,13 +915,13 @@ function genTest(){
     let p
     for (let index = 0; index < 10; index++) {
         p = Displayer.getRandomInt(1,6)
-        console.log("OK")
         vb = getRandVb()
         conj = getConj(vb,localStorage.getItem("temps"),p)
         tp = localStorage.getItem("temps")
         tb[conj]=[vb,5,tp,p]
     }
-    localStorage.setItem("corr",tb)
+    
+    localStorage.setItem("corr",JSON.stringify(tb))
     return tb
 }
 
