@@ -22,6 +22,7 @@ function displayQuest(vb,rep,id,p){
             <input type="text" name="${vb.vb}" id=${id}>
         </div>
     `
+    displayAlert()
 }
 
 //Affichage du bouton de validation des tests
@@ -108,7 +109,65 @@ function verifRep(){
     localStorage.setItem("chk",tabCheck)
 }
 
+function displayAlert(){
+    let bal = getMainBal()
+    bal.innerHTML += `
+    <style>
+        /* Style de l'arrière-plan semi-transparent */
+        .popup-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
 
+        /* Style de la fenêtre pop-up */
+        .popup-content {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            z-index: 1000;
+        }
+
+        /* Bouton de fermeture */
+        .close-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .close-btn:hover {
+            background-color: #d32f2f;
+        }
+
+        
+        .open-popup-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+            <h2>Bonjour !</h2>
+            <p>Ceci est une fenêtre pop-up.</p>
+            <button class="close-btn" onclick="closePopup()">Fermer</button>
+        </div>
+    </div>
+
+    `
+}
 
 
 
