@@ -42,4 +42,27 @@ Pour calcul on peut faire de la proportionalité: on additione tous les scores d
 
 on ajoute la méthode de calcul du score d'erreur après l'enregistrement des erreurs courantes dans le local storage.
 
+Il faut aussi s'occuper de la coloration des réponses fausses ( juste pour que ça soit visible. Finalement pas de récap sur le pop up. Pop up juste pour test de positionnement. Sauf si y'a du temps.)
+
+Il faudra tout adapter pour temps composé.
+
+Mardi soir:
+
+- Coloration erreurs
+- Mettre de coté pop up pour juste le positionnement.
+- tester
+
+Mercredi soir
+
+- Temps composé
+- Pop up pour test position ( d'ailleurs je conseil pour le test de pos de mettre une classe "pos" dans la balise pour pouvoir faire les actions avec pop up)
+- Tester tout et faire les href aux autres pages ( pas tout seul pour être sur de ce que je fait)
+- mettre sur un autre git
+
+Evolutions possibles:
+
+- Séparer radical et terminaisons lors de l'affichage de l'erreur 
+- pop up avec récap de l'exo ( un peu dur à faire ou en tout cas je vois pas pour l'instant.)
+- Temps imparti pour test final
+
 
