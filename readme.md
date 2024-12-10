@@ -28,3 +28,18 @@ Test de pos : Afficher vraie alerte ou pop up maison ? ( plus jolie pop up maiso
 
 afficher résultat de chaque questions
 
+
+Pour enregistrer les erreurs: 
+
+Dans le local storage on aura une liste de ce type:
+
+["temp1":1, "temps2":3 ]
+ 
+Puis il faudrait une methode qui créer le test final a partir de ça. 
+
+Pour calcul on peut faire de la proportionalité: on additione tous les scores d'erreur et on établit le nombre de question d'un temps en faisant un calcul tout simple.
+( Il faudrait mettre une classe différente dans la balise genre 'all')
+
+on ajoute la méthode de calcul du score d'erreur après l'enregistrement des erreurs courantes dans le local storage.
+
+
