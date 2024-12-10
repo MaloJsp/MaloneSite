@@ -101,72 +101,64 @@ function verifRep(){
     let count = 0
     let tabCheck = []
     Object.entries(corr).forEach(([rep, verb]) => {
-        tabCheck[count]=rep == inputs[count]
-        count++;
-
+        tabCheck[count]= rep.trim() == inputs[count].trim()
+        count++
     });
-
+    colorError(tabCheck)
     localStorage.setItem("chk",tabCheck)
 }
 
-function displayAlert(){
+export function displayAlert(){
     let bal = getMainBal()
     bal.innerHTML += `
     <style>
         /* Style de l'arrière-plan semi-transparent */
-        .popup-overlay {
-            display: none;
+        .modal {
+            display: none; /* Masquée par défaut */
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-
-        /* Style de la fenêtre pop-up */
-        .popup-content {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
             z-index: 1000;
         }
 
-        /* Bouton de fermeture */
-        .close-btn {
-            display: inline-block;
-            margin-top: 10px;
-            padding: 8px 15px;
-            background-color: #f44336;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .close-btn:hover {
-            background-color: #d32f2f;
-        }
-
-        
-        .open-popup-btn:hover {
-            background-color: #45a049;
+        .modal-content {
+            position: relative;
+            margin: 10% auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            width: 80%;
+            max-width: 400px;
+            text-align: center;
         }
     </style>
-    <div class="popup-overlay" id="popup">
-        <div class="popup-content">
-            <h2>Bonjour !</h2>
-            <p>Ceci est une fenêtre pop-up.</p>
-            <button class="close-btn" onclick="closePopup()">Fermer</button>
+       <div id="modal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModalBtn">&times;</button>
+            <h2>Voici une popup</h2>
+            <p>Vous pouvez y ajouter votre contenu.</p>
         </div>
     </div>
 
     `
+
+}
+
+function colorError(tabCheck){
+    let bal
+    for (let index = 0; index < 10; index++) {
+        bal = document.getElementById(index+1)
+        bal.disabled = ! localStorage.getItem("temps") == "all"
+        console.log(getMainBal())
+        if (tabCheck[index]) {
+            bal.style.color = "green"
+        }else{
+            bal.style.color = "red"
+        }
+    }
 }
 
 

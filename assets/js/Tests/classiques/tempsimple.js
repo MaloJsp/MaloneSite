@@ -294,7 +294,7 @@ let vb = [
         grp: 1
     },
     {
-        vb: "maanquer",
+        vb: "manquer",
         rad: "manqu",
         grp: 1
     },
@@ -876,10 +876,16 @@ let vb = [
 ]
 
 window.onload = () => {
-    localStorage.setItem("temps",document.getElementById("exo").classList[0])
-    let a = genTest()
-    Displayer.displayExo(a)
-    localStorage.setItem("reponses",[])
+    if (localStorage.getItem("test")){
+        document.getElementById("btnP").addEventListener('click', () => {
+            modal.style.display = 'block';
+        });
+        testPopup()
+    }
+    // localStorage.setItem("temps",document.getElementById("exo").classList[0])
+    // let a = genTest()
+    // Displayer.displayExo(a)
+    // localStorage.setItem("reponses",[])
     
 }
 //Fonction qui récupere la terminaison dans le tableau (confort d'utilisation)
@@ -925,7 +931,9 @@ function genTest(){
     return tb
 }
 
-
+function testPopup(){
+    Displayer.displayAlert()
+}
 
 // let verb = getRandVb()
 

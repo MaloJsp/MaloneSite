@@ -30,10 +30,6 @@ afficher résultat de chaque questions
 
 
 Pour enregistrer les erreurs: 
-
-Dans le local storage on aura une liste de ce type:
-
-["temp1":1, "temps2":3 ]
  
 Puis il faudrait une methode qui créer le test final a partir de ça. 
 
@@ -48,7 +44,6 @@ Il faudra tout adapter pour temps composé.
 
 Mardi soir:
 
-- Coloration erreurs
 - Mettre de coté pop up pour juste le positionnement.
 - tester
 
