@@ -20,6 +20,7 @@ function displayQuest(vb,rep,id,p){
                ${libPrsn} ${vb.vb} 
             </label>
             <input type="text" name="${vb.vb}" id=${id}>
+            <div id="r${id}"></div>
         </div>
     `
     displayAlert()
@@ -36,6 +37,7 @@ function displayBtn(){
         let tab = []
         for (let index = 1; index < 11; index++) {
             inp = document.getElementById(index)
+            // console.log(inp)
             tab[index-1]=inp.value
         }
         localStorage.setItem("reponses",JSON.stringify(tab))
@@ -105,6 +107,7 @@ function verifRep(){
         count++
     });
     colorError(tabCheck)
+    displayGoodRep(tabCheck)
     localStorage.setItem("chk",tabCheck)
 }
 
@@ -152,7 +155,8 @@ function colorError(tabCheck){
     for (let index = 0; index < 10; index++) {
         bal = document.getElementById(index+1)
         bal.disabled = ! localStorage.getItem("temps") == "all"
-        console.log(getMainBal())
+        // console.log(getMainBal())
+        bal.disabled = true
         if (tabCheck[index]) {
             bal.style.color = "green"
         }else{
@@ -162,4 +166,20 @@ function colorError(tabCheck){
 }
 
 
-
+function displayGoodRep(chk){
+    let balRep
+    let repL = []
+    Object.entries(JSON.parse(localStorage.getItem("corr"))).forEach(([rep, verb]) => {
+        repL.push(rep)
+    });
+    console.log(repL)
+    for (let index = 1; index < 11; index++) {
+        if(!chk[index-1]){
+            balRep =  document.getElementById("r"+(index))
+            balRep.innerHTML = `
+                La bonne réponse est <b>${repL[index-1]}</b></br>
+            `
+        }
+        
+    }
+}

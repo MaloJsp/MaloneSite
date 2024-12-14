@@ -876,18 +876,20 @@ let vb = [
 ]
 
 window.onload = () => {
-    if (localStorage.getItem("test")){
-        document.getElementById("btnP").addEventListener('click', () => {
-            modal.style.display = 'block';
-        });
-        testPopup()
-    }
-    // localStorage.setItem("temps",document.getElementById("exo").classList[0])
-    // let a = genTest()
-    // Displayer.displayExo(a)
-    // localStorage.setItem("reponses",[])
+    // if (localStorage.getItem("test")){
+    //     document.getElementById("btnP").addEventListener('click', () => {
+    //         modal.style.display = 'block';
+    //     });
+    //     testPopup()
+    // }
+    localStorage.setItem("temps",document.getElementById("exo").classList[0])
+    let a = genTest()
+    Displayer.displayExo(a)
+    localStorage.setItem("reponses",[])
     
 }
+
+
 //Fonction qui récupere la terminaison dans le tableau (confort d'utilisation)
 //tp: temps, valeurs possibles: present,imparfait,futur,passe,conditionnel,imperatif
 //grp: groupe du verbe, valeurs possibles: 1,2,3 ( si au passé simple accepte aussi 4,5)
