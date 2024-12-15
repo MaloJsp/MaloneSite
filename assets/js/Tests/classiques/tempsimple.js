@@ -29,6 +29,713 @@ let terminaisons = {
 
 let vb = [
     {
+        vb: "accepter",
+        rad: "accept",
+        grp: 1,
+        pp : "accepté",
+        pp_id : 2
+    },
+    {
+        vb: "acheter",
+        rad: "achet",
+        grp: 1,
+        pp : "acheté",
+        pp_id : 2
+    },
+    {
+        vb: "aider",
+        rad: "aid",
+        grp: 1,
+        pp : "aidé",
+        pp_id : 2
+    },
+    {
+        vb: "aimer",
+        rad: "aim",
+        grp: 1,
+        pp : "aimé",
+        pp_id : 2
+    },
+    {
+        vb: "ajouter",
+        rad: "ajout",
+        grp: 1,
+        pp : "ajouté",
+        pp_id : 2
+    },
+    {
+        vb: "appeler",
+        rad: "appel",
+        grp: 1,
+        pp : "appelé",
+        pp_id : 2
+    },
+    {
+        vb: "apporter",
+        rad: "apport",
+        grp: 1,
+        pp : "apporté",
+        pp_id : 2
+    },
+    {
+        vb: "approcher",
+        rad: "approch",
+        grp: 1,
+        pp : "approché",
+        pp_id : 2
+    },
+    {
+        vb: "appuyer",
+        rad: "appuy",
+        grp: 1,
+        pp : "appuyé",
+        pp_id : 2
+    },
+    {
+        vb: "arrêter",
+        rad: "arrêt",
+        grp: 1,
+        pp : "arrêté",
+        pp_id : 2
+    },
+    {
+        vb: "arriver",
+        rad: "arriv",
+        grp: 1,
+        pp : "arrivé",
+        pp_id : 1
+    },
+    {
+        vb: "assurer",
+        rad: "assur",
+        grp: 1,
+        pp : "assuré",
+        pp_id : 2
+    },
+    {
+        vb: "avancer",
+        rad: "avanc",
+        grp: 1,
+        pp : "avancé",
+        pp_id : 2
+    },
+    {
+        vb: "briller",
+        rad: "brill",
+        grp: 1,
+        pp : "brillé",
+        pp_id : 2
+    },
+    {
+        vb: "brûler",
+        rad: "brûl",
+        grp: 1,
+        pp : "brûlé",
+        pp_id : 2
+    },
+    {
+        vb: "cacher",
+        rad: "cach",
+        grp: 1,
+        pp : "caché",
+        pp_id : 1
+    },
+    {
+        vb: "causer",
+        rad: "caus",
+        grp: 1,
+        pp : "causé",
+        pp_id : 2
+    },
+    {
+        vb: "cesser",
+        rad: "cess",
+        grp: 1,
+        pp : "cessé",
+        pp_id : 2
+    },
+    {
+        vb: "changer",
+        rad: "chang",
+        grp: 1,
+        pp : "changé",
+        pp_id : 2
+    },
+    {
+        vb: "chanter",
+        rad: "chant",
+        grp: 1,
+        pp : "chanté",
+        pp_id : 2
+    },
+    {
+        vb: "charger",
+        rad: "charg",
+        grp: 1,
+        pp : "chargé",
+        pp_id : 2
+    },
+    {
+        vb: "chercher",
+        rad: "cherch",
+        grp: 1,
+        pp : "cherché",
+        pp_id : 2
+    },
+    {
+        vb: "commencer",
+        rad: "commenc",
+        grp: 1,
+        pp : "commencé",
+        pp_id : 2
+    },
+    {
+        vb: "compter",
+        rad: "compt",
+        grp: 1,
+        pp : "compté",
+        pp_id : 2
+    },
+    {
+        vb: "continuer",
+        rad: "continu",
+        grp: 1,
+        pp : "continué",
+        pp_id : 2
+    },
+    {
+        vb: "coucher",
+        rad: "couch",
+        grp: 1,
+        pp : "couché",
+        pp_id : 1
+    },
+    {
+        vb: "crier",
+        rad: "cri",
+        grp: 1,
+        pp : "crié",
+        pp_id : 2
+    },
+    {
+        vb: "décider",
+        rad: "décid",
+        grp: 1,
+        pp : "décidé",
+        pp_id : 2
+    },
+    {
+        vb: "demander",
+        rad: "demand",
+        grp: 1,
+        pp : "demandé",
+        pp_id : 2
+    },
+    {
+        vb: "deviner",
+        rad: "devin",
+        grp: 1,
+        pp : "deviné",
+        pp_id : 2
+    },
+    {
+        vb: "donner",
+        rad: "donn",
+        grp: 1,
+        pp : "donné",
+        pp_id : 2
+    },
+    {
+        vb: "écouter",
+        rad: "écout",
+        grp: 1,
+        pp : "écouté",
+        pp_id : 2
+    },
+    {
+        vb: "élever",
+        rad: "élev",
+        grp: 1,
+        pp : "élevé",
+        pp_id : 2
+    },
+    {
+        vb: "embrasser",
+        rad: "embrass",
+        grp: 1,
+        pp : "embrassé",
+        pp_id : 2
+    },
+    {
+        vb: "emporter",
+        rad: "emport",
+        grp: 1,
+        pp : "emporté",
+        pp_id : 2
+    },
+    {
+        vb: "entrer",
+        rad: "entr",
+        grp: 1,
+        pp : "entré",
+        pp_id : 1
+    },
+    {
+        vb: "envoyer",
+        rad: "envoy",
+        grp: 1,
+        pp : "envoyé",
+        pp_id : 2
+    },
+    {
+        vb: "espérer",
+        rad: "espér",
+        grp: 1,
+        pp : "espéré",
+        pp_id : 2
+    },
+    {
+        vb: "essayer",
+        rad: "essay",
+        grp: 1,
+        pp : "essayé",
+        pp_id : 2
+    },
+    {
+        vb: "exister",
+        rad: "exist",
+        grp: 1,
+        pp : "existé",
+        pp_id : 2
+    },
+    {
+        vb: "expliquer",
+        rad: "expliqu",
+        grp: 1,
+        pp : "expliqué",
+        pp_id : 2
+    },
+    {
+        vb: "exprimer",
+        rad: "exprim",
+        grp: 1,
+        pp : "exprimé",
+        pp_id : 2
+    },
+    {
+        vb: "fermer",
+        rad: "ferm",
+        grp: 1,
+        pp : "fermé",
+        pp_id : 2
+    },
+    {
+        vb: "former",
+        rad: "form",
+        grp: 1,
+        pp : "formé",
+        pp_id : 2
+    },
+    {
+        vb: "frapper",
+        rad: "frapp",
+        grp: 1,
+        pp : "frappé",
+        pp_id : 2
+    },
+    {
+        vb: "gagner",
+        rad: "gagn",
+        grp: 1,
+        pp : "gagné",
+        pp_id : 2
+    },
+    {
+        vb: "garder",
+        rad: "gard",
+        grp: 1,
+        pp : "gardé",
+        pp_id : 2
+    },
+    {
+        vb: "glisser",
+        rad: "gliss",
+        grp: 1,
+        pp : "glissé",
+        pp_id : 2
+    },
+    {
+        vb: "jeter",
+        rad: "jet",
+        grp: 1,
+        pp : "jeté",
+        pp_id : 2
+    },
+    {
+        vb: "jouer",
+        rad: "jou",
+        grp: 1,
+        pp : "joué",
+        pp_id : 2
+    },
+    {
+        vb: "juger",
+        rad: "jug",
+        grp: 1,
+        pp : "jugé",
+        pp_id : 2
+    },
+    {
+        vb: "lever",
+        rad: "lev",
+        grp: 1,
+        pp : "levé",
+        pp_id : 1
+    },
+    {
+        vb: "manger",
+        rad: "mang",
+        grp: 1,
+        pp : "mangé",
+        pp_id : 2
+    },
+    {
+        vb: "manquer",
+        rad: "manqu",
+        grp: 1,
+        pp : "manqué",
+        pp_id : 2
+    },
+    {
+        vb: "marcher",
+        rad: "march",
+        grp: 1,
+        pp : "marché",
+        pp_id : 2
+    },
+    {
+        vb: "monter",
+        rad: "mont",
+        grp: 1,
+        pp : "monté",
+        pp_id : 1
+    },
+    {
+        vb: "montrer",
+        rad: "montr",
+        grp: 1,
+        pp : "montré",
+        pp_id : 2
+    },
+    {
+        vb: "nommer",
+        rad: "nomm",
+        grp: 1,
+        pp : "nommé",
+        pp_id : 1
+    },
+    {
+        vb: "occuper",
+        rad: "occup",
+        grp: 1,
+        pp : "occupé",
+        pp_id : 1
+    },
+    {
+        vb: "oublier",
+        rad: "oubli",
+        grp: 1,
+        pp : "oublié",
+        pp_id : 2
+    },
+    {
+        vb: "parler",
+        rad: "parl",
+        grp: 1,
+        pp : "parlé",
+        pp_id : 2
+    },
+    {
+        vb: "passer",
+        rad: "pass",
+        grp: 1,
+        pp : "passé",
+        pp_id : 1
+    },
+    {
+        vb: "payer",
+        rad: "pay",
+        grp: 1,
+        pp : "payé",
+        pp_id : 2
+    },
+    {
+        vb: "penser",
+        rad: "pens",
+        grp: 1,
+        pp : "pensé",
+        pp_id : 2
+    },
+    {
+        vb: "placer",
+        rad: "plac",
+        grp: 1,
+        pp : "placé",
+        pp_id : 1
+    },
+    {
+        vb: "pleurer",
+        rad: "pleur",
+        grp: 1,
+        pp : "pleuré",
+        pp_id : 2
+    },
+    {
+        vb: "porter",
+        rad: "port",
+        grp: 1,
+        pp : "porté",
+        pp_id : 2
+    },
+    {
+        vb: "poser",
+        rad: "pos",
+        grp: 1,
+        pp : "posé",
+        pp_id : 2
+    },
+    {
+        vb: "posséder",
+        rad: "posséd",
+        grp: 1,
+        pp : "possédé",
+        pp_id : 2
+    },
+    {
+        vb: "pousser",
+        rad: "pouss",
+        grp: 1,
+        pp : "poussé",
+        pp_id : 2
+    },
+    {
+        vb: "préparer",
+        rad: "prépar",
+        grp: 1,
+        pp : "préparé",
+        pp_id : 2
+    },
+    {
+        vb: "présenter",
+        rad: "présent",
+        grp: 1,
+        pp : "présenté",
+        pp_id : 2
+    },
+    {
+        vb: "prier",
+        rad: "pri",
+        grp: 1,
+        pp : "prié",
+        pp_id : 2
+    },
+    {
+        vb: "prononcer",
+        rad: "prononc",
+        grp: 1,
+        pp : "prononcé",
+        pp_id : 2
+    },
+    {
+        vb: "quitter",
+        rad: "quitt",
+        grp: 1,
+        pp : "quitté",
+        pp_id : 2
+    },
+    {
+        vb: "raconter",
+        rad: "racont",
+        grp: 1,
+        pp : "raconté",
+        pp_id : 2
+    },
+    {
+        vb: "rappeler",
+        rad: "rappel",
+        grp: 1,
+        pp : "rappelé",
+        pp_id : 2
+    },
+    {
+        vb: "refuser",
+        rad: "refus",
+        grp: 1,
+        pp : "refusé",
+        pp_id : 2
+    },
+    {
+        vb: "regarder",
+        rad: "regard",
+        grp: 1,
+        pp : "regardé",
+        pp_id : 2
+    },
+    {
+        vb: "rencontrer",
+        rad: "rencontr",
+        grp: 1,
+        pp : "rencontré",
+        pp_id : 2
+    },
+    {
+        vb: "rentrer",
+        rad: "rentr",
+        grp: 1,
+        pp : "rentré",
+        pp_id : 1
+    },
+    {
+        vb: "répéter",
+        rad: "répét",
+        grp: 1,
+        pp : "répété",
+        pp_id : 2
+    },
+    {
+        vb: "ressembler",
+        rad: "ressembl",
+        grp: 1,
+        pp : "ressemblé",
+        pp_id : 2
+    },
+    {
+        vb: "rester",
+        rad: "rest",
+        grp: 1,
+        pp : "resté",
+        pp_id : 1
+    },
+    {
+        vb: "retourner",
+        rad: "retourn",
+        grp: 1,
+        pp : "retourné",
+        pp_id : 2
+    },
+    {
+        vb: "retrouver",
+        rad: "retrouv",
+        grp: 1,
+        pp : "retrouvé",
+        pp_id : 2
+    },
+    {
+        vb: "rêver",
+        rad: "rêv",
+        grp: 1,
+        pp : "rêvé",
+        pp_id : 2
+    },
+    {
+        vb: "rouler",
+        rad: "roul",
+        grp: 1,
+        pp : "roulé",
+        pp_id : 2
+    },
+    {
+        vb: "sauver",
+        rad: "sauv",
+        grp: 1,
+        pp : "sauvé",
+        pp_id : 1
+    },
+    {
+        vb: "sembler",
+        rad: "sembl",
+        grp: 1,
+        pp : "semblé",
+        pp_id : 2
+    },
+    {
+        vb: "tirer",
+        rad: "tir",
+        grp: 1,
+        pp : "tiré",
+        pp_id : 2
+    },
+    {
+        vb: "tomber",
+        rad: "tomb",
+        grp: 1,
+        pp : "tombé",
+        pp_id : 1
+    },
+    {
+        vb: "toucher",
+        rad: "touch",
+        grp: 1,
+        pp : "touché",
+        pp_id : 2
+    },
+    {
+        vb: "tourner",
+        rad: "tourn",
+        grp: 1,
+        pp : "tourné",
+        pp_id : 2
+    },
+    {
+        vb: "travailler",
+        rad: "travaill",
+        grp: 1,
+        pp : "travaillé",
+        pp_id : 2
+    },
+    {
+        vb: "traverser",
+        rad: "travers",
+        grp: 1,
+        pp : "traversé",
+        pp_id : 2
+    },
+    {
+        vb: "tromper",
+        rad: "tromp",
+        grp: 1,
+        pp : "trompé",
+        pp_id : 2
+    },
+    {
+        vb: "trouver",
+        rad: "trouv",
+        grp: 1,
+        pp : "trouvé",
+        pp_id : 2
+    },
+    {
+        vb: "tuer",
+        rad: "tu",
+        grp: 1,
+        pp : "tué",
+        pp_id : 2
+    },
+    {
+        vb: "voler",
+        rad: "vol",
+        grp: 1,
+        pp : "volé",
+        pp_id : 2
+    },
+    {
+        vb: "voyager",
+        rad: "voyag",
+        grp: 1,
+        pp : "voyagé",
+        pp_id : 2
+    },
+    {
         vb: "saisir",
         rad: "sais",
         rad_imp: "saisiss",
@@ -611,7 +1318,7 @@ function getConj(vb,tp,prsn){
     let term
     let conj
     term = getTerminaison(tp,vb.grp,prsn)
-    if (tp == "imparfait" && vb.grp == 2) {
+    if (tp == "imparfait") {
         conj = vb.rad_imp + term
     }else{
         conj = vb.rad + term 
