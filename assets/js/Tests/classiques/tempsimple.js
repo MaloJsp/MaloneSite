@@ -738,6 +738,7 @@ let vb = [
     {
         vb: "saisir",
         rad: "sais",
+        rad_imp: "saisiss",
         grp: 2,
         pp : "saisi",
         pp_id : 2
@@ -745,6 +746,7 @@ let vb = [
     {
         vb: "finir",
         rad: "fin",
+        rad_imp: "finiss",
         grp: 2,
         pp : "fini",
         pp_id : 2
@@ -752,6 +754,7 @@ let vb = [
     {
         vb: "grandir",
         rad: "grand",
+        rad_imp: "grandiss",
         grp: 2,
         pp : "grandi",
         pp_id : 2
@@ -759,6 +762,7 @@ let vb = [
     {
         vb: "agir",
         rad: "ag",
+        rad_imp: "agiss",
         grp: 2,
         pp : "agi",
         pp_id : 2
@@ -766,6 +770,7 @@ let vb = [
     {
         vb: "agrandir",
         rad: "agrand",
+        rad_imp: "agrandiss",
         grp: 2,
         pp : "agrandi",
         pp_id : 2
@@ -773,6 +778,7 @@ let vb = [
     {
         vb: "aplatir",
         rad: "aplat",
+        rad_imp: "aplatiss",
         grp: 2,
         pp : "aplati",
         pp_id : 2
@@ -780,6 +786,7 @@ let vb = [
     {
         vb: "appauvrir",
         rad: "appauvr",
+        rad_imp: "appauvriss",
         grp: 2,
         pp : "appauvri",
         pp_id : 2
@@ -787,6 +794,7 @@ let vb = [
     {
         vb: "applaudir",
         rad: "applaud",
+        rad_imp: "applaudiss",
         grp: 2,
         pp : "applaudi",
         pp_id : 2
@@ -794,6 +802,7 @@ let vb = [
     {
         vb: "approfondir",
         rad: "approfond",
+        rad_imp: "approfondiss",
         grp: 2,
         pp : "approfondi",
         pp_id : 2
@@ -801,6 +810,7 @@ let vb = [
     {
         vb: "arrondir",
         rad: "arrond",
+        rad_imp: "arrondiss",
         grp: 2,
         pp : "arrondi",
         pp_id : 2
@@ -808,6 +818,7 @@ let vb = [
     {
         vb: "assortir",
         rad: "assort",
+        rad_imp: "assortiss",
         grp: 2,
         pp : "assorti",
         pp_id : 1
@@ -815,6 +826,7 @@ let vb = [
     {
         vb: "atterir",
         rad: "atter",
+        rad_imp: "atteriss",
         grp: 2,
         pp : "atteri",
         pp_id : 2
@@ -822,6 +834,7 @@ let vb = [
     {
         vb: "avertir",
         rad: "avert",
+        rad_imp: "avertiss",
         grp: 2,
         pp : "averti",
         pp_id : 2
@@ -829,6 +842,7 @@ let vb = [
     {
         vb: "bannir",
         rad: "bann",
+        rad_imp: "banniss",
         grp: 2,
         pp : "banni",
         pp_id : 1
@@ -836,6 +850,7 @@ let vb = [
     {
         vb: "bâtir",
         rad: "bât",
+        rad_imp: "bâtiss",
         grp: 2,
         pp : "bâti",
         pp_id : 2
@@ -843,6 +858,7 @@ let vb = [
     {
         vb: "bénir",
         rad: "bén",
+        rad_imp: "béniss",
         grp: 2,
         pp : "béni",
         pp_id : 2
@@ -850,6 +866,7 @@ let vb = [
     {
         vb: "choisir",
         rad: "chois",
+        rad_imp: "choisiss",
         grp: 2,
         pp : "choisi",
         pp_id : 2
@@ -857,6 +874,7 @@ let vb = [
     {
         vb: "convertir",
         rad: "convert",
+        rad_imp: "convertiss",
         grp: 2,
         pp : "converti",
         pp_id : 2
@@ -864,6 +882,7 @@ let vb = [
     {
         vb: "définir",
         rad: "défin",
+        rad_imp: "définiss",
         grp: 2,
         pp : "défini",
         pp_id : 2
@@ -871,13 +890,15 @@ let vb = [
     {
         vb: "démolir",
         rad: "démol",
+        rad_imp: "démoliss",
         grp: 2,
         pp : "démoli",
         pp_id : 2
     },
     {
         vb: "désobéir",
-        rad: "désobé",
+        rad: "désobé",        
+        rad_imp: "désobéiss",
         grp: 2,
         pp : "désobéi",
         pp_id : 2
@@ -885,6 +906,7 @@ let vb = [
     {
         vb: "durcir",
         rad: "durc",
+        rad_imp: "durciss",
         grp: 2,
         pp : "durci",
         pp_id : 1
@@ -892,6 +914,7 @@ let vb = [
     {
         vb: "éclaircir",
         rad: "éclairc",
+        rad_imp: "éclairciss",
         grp: 2,
         pp : "éclairci",
         pp_id : 2
@@ -899,6 +922,7 @@ let vb = [
     {
         vb: "élargir",
         rad: "élarg",
+        rad_imp: "élargiss",
         grp: 2,
         pp : "élargi",
         pp_id : 2
@@ -906,6 +930,7 @@ let vb = [
     {
         vb: "embellir",
         rad: "embell",
+        rad_imp: "embelliss",
         grp: 2,
         pp : "embelli",
         pp_id : 1
@@ -913,6 +938,7 @@ let vb = [
     {
         vb: "enrichir",
         rad: "enrich",
+        rad_imp: "enrichiss",
         grp: 2,
         pp : "enrichi",
         pp_id : 1
@@ -920,6 +946,7 @@ let vb = [
     {
         vb: "envahir",
         rad: "envah",
+        rad_imp: "envahiss",
         grp: 2,
         pp : "envahi",
         pp_id : 2
@@ -927,6 +954,7 @@ let vb = [
     {
         vb: "épaissir",
         rad: "épaiss",
+        rad_imp: "épaississ",
         grp: 2,
         pp : "épaissi",
         pp_id : 2
@@ -934,6 +962,7 @@ let vb = [
     {
         vb: "établir",
         rad: "établ",
+        rad_imp: "établiss",
         grp: 2,
         pp : "établi",
         pp_id : 2
@@ -941,6 +970,7 @@ let vb = [
     {
         vb: "fleurir",
         rad: "fleur",
+        rad_imp: "fleuriss",
         grp: 2,
         pp : "fleuri",
         pp_id : 2
@@ -948,6 +978,7 @@ let vb = [
     {
         vb: "fournir",
         rad: "fourn",
+        rad_imp: "fourniss",
         grp: 2,
         pp : "fourni",
         pp_id : 2
@@ -955,6 +986,7 @@ let vb = [
     {
         vb: "garantir",
         rad: "garant",
+        rad_imp: "garantiss",
         grp: 2,
         pp : "garanti",
         pp_id : 2
@@ -962,6 +994,7 @@ let vb = [
     {
         vb: "gémir",
         rad: "gém",
+        rad_imp: "gémiss",
         grp: 2,
         pp : "gémi",
         pp_id : 2
@@ -969,6 +1002,7 @@ let vb = [
     {
         vb: "grossir",
         rad: "gross",
+        rad_imp: "grossiss",
         grp: 2,
         pp : "grossi",
         pp_id : 2
@@ -976,6 +1010,7 @@ let vb = [
     {
         vb: "guérir",
         rad: "guér",
+        rad_imp: "guériss",
         grp: 2,
         pp : "guéri",
         pp_id : 1
@@ -983,6 +1018,7 @@ let vb = [
     {
         vb: "investir",
         rad: "invest",
+        rad_imp: "investiss",
         grp: 2,
         pp : "investi",
         pp_id : 1
@@ -990,6 +1026,7 @@ let vb = [
     {
         vb: "jaillir",
         rad: "jaill",
+        rad_imp: "jailliss",
         grp: 2,
         pp : "jailli",
         pp_id : 2
@@ -997,6 +1034,7 @@ let vb = [
     {
         vb: "jaunir",
         rad: "jaun",
+        rad_imp: "jauniss",
         grp: 2,
         pp : "jauni",
         pp_id : 2
@@ -1004,6 +1042,7 @@ let vb = [
     {
         vb: "maigrir",
         rad: "maigr",
+        rad_imp: "maigriss",
         grp: 2,
         pp : "maigri",
         pp_id : 2
@@ -1011,6 +1050,7 @@ let vb = [
     {
         vb: "mincir",
         rad: "minc",
+        rad_imp: "minciss",
         grp: 2,
         pp : "minci",
         pp_id : 2
@@ -1018,6 +1058,7 @@ let vb = [
     {
         vb: "moisir",
         rad: "mois",
+        rad_imp: "moisiss",
         grp: 2,
         pp : "moisi",
         pp_id : 1
@@ -1025,6 +1066,7 @@ let vb = [
     {
         vb: "mûrir",
         rad: "mûr",
+        rad_imp: "mûriss",
         grp: 2,
         pp : "mûri",
         pp_id : 2
@@ -1032,6 +1074,7 @@ let vb = [
     {
         vb: "noircir",
         rad: "noirc",
+        rad_imp: "noirciss",
         grp: 2,
         pp : "noirci",
         pp_id : 2
@@ -1039,6 +1082,7 @@ let vb = [
     {
         vb: "nourrir",
         rad: "nourr",
+        rad_imp: "nourriss",
         grp: 2,
         pp : "nourri",
         pp_id : 2
@@ -1046,6 +1090,7 @@ let vb = [
     {
         vb: "obéir",
         rad: "obé",
+        rad_imp: "obéiss",
         grp: 2,
         pp : "obéi",
         pp_id : 2
@@ -1053,6 +1098,7 @@ let vb = [
     {
         vb: "pourrir",
         rad: "pourr",
+        rad_imp: "pourriss",
         grp: 2,
         pp : "pourri",
         pp_id : 2
@@ -1060,6 +1106,7 @@ let vb = [
     {
         vb: "punir",
         rad: "pun",
+        rad_imp: "puniss",
         grp: 2,
         pp : "puni",
         pp_id : 1
@@ -1067,6 +1114,7 @@ let vb = [
     {
         vb: "raccourcir",
         rad: "raccourc",
+        rad_imp: "raccourciss",
         grp: 2,
         pp : "raccourci",
         pp_id : 2
@@ -1074,6 +1122,7 @@ let vb = [
     {
         vb: "rafraîchir",
         rad: "rafraîch",
+        rad_imp: "rafraîchiss",
         grp: 2,
         pp : "rafraîchi",
         pp_id : 1
@@ -1081,6 +1130,7 @@ let vb = [
     {
         vb: "rajeunir",
         rad: "rajeun",
+        rad_imp: "rajeuniss",
         grp: 2,
         pp : "rajeuni",
         pp_id : 2
@@ -1088,6 +1138,7 @@ let vb = [
     {
         vb: "ralentir",
         rad: "ralent",
+        rad_imp: "ralentiss",
         grp: 2,
         pp : "ralenti",
         pp_id : 2
@@ -1095,6 +1146,7 @@ let vb = [
     {
         vb: "ramollir",
         rad: "ramoll",
+        rad_imp: "ramolliss",
         grp: 2,
         pp : "ramolli",
         pp_id : 1
@@ -1102,6 +1154,7 @@ let vb = [
     {
         vb: "réagir",
         rad: "réag",
+        rad_imp: "réagiss",
         grp: 2,
         pp : "réagi",
         pp_id : 2
@@ -1109,6 +1162,7 @@ let vb = [
     {
         vb: "réfléchir",
         rad: "réfléch",
+        rad_imp: "réfléchiss",
         grp: 2,
         pp : "réfléchi",
         pp_id : 2
@@ -1116,6 +1170,7 @@ let vb = [
     {
         vb: "refroidir",
         rad: "refroid",
+        rad_imp: "refroidiss",
         grp: 2,
         pp : "refroidi",
         pp_id : 1
@@ -1123,6 +1178,7 @@ let vb = [
     {
         vb: "réjouir",
         rad: "réjou",
+        rad_imp: "réjouiss",
         grp: 2,
         pp : "réjoui",
         pp_id : 1
@@ -1130,6 +1186,7 @@ let vb = [
     {
         vb: "remplir",
         rad: "rempl",
+        rad_imp: "rempliss",
         grp: 2,
         pp : "rempli",
         pp_id : 2
@@ -1137,6 +1194,7 @@ let vb = [
     {
         vb: "réunir",
         rad: "réun",
+        rad_imp: "réuniss",
         grp: 2,
         pp : "réuni",
         pp_id : 2
@@ -1144,6 +1202,7 @@ let vb = [
     {
         vb: "réussir",
         rad: "réuss",
+        rad_imp: "réussiss",
         grp: 2,
         pp : "réussi",
         pp_id : 2
@@ -1151,6 +1210,7 @@ let vb = [
     {
         vb: "rôtir",
         rad: "rôt",
+        rad_imp: "rôtiss",
         grp: 2,
         pp : "rôti",
         pp_id : 2
@@ -1158,6 +1218,7 @@ let vb = [
     {
         vb: "rougir",
         rad: "roug",
+        rad_imp: "rougiss",
         grp: 2,
         pp : "rougi",
         pp_id : 2
@@ -1165,6 +1226,7 @@ let vb = [
     {
         vb: "salir",
         rad: "sal",
+        rad_imp: "saliss",
         grp: 2,
         pp : "sali",
         pp_id : 2
@@ -1172,6 +1234,7 @@ let vb = [
     {
         vb: "subir",
         rad: "sub",
+        rad_imp: "subiss",
         grp: 2,
         pp : "subi",
         pp_id : 2
@@ -1179,6 +1242,7 @@ let vb = [
     {
         vb: "surgir",
         rad: "surg",
+        rad_imp: "surgiss",
         grp: 2,
         pp : "surgi",
         pp_id : 2
@@ -1186,6 +1250,7 @@ let vb = [
     {
         vb: "trahir",
         rad: "trah",
+        rad_imp: "trahiss",
         grp: 2,
         pp : "trahi",
         pp_id : 2
@@ -1193,6 +1258,7 @@ let vb = [
     {
         vb: "unir",
         rad: "un",
+        rad_imp: "uniss",
         grp: 2,
         pp : "uni",
         pp_id : 1
@@ -1200,6 +1266,7 @@ let vb = [
     {
         vb: "vieillir",
         rad: "vieill",
+        rad_imp: "vieilliss",
         grp: 2,
         pp : "vieilli",
         pp_id : 2
@@ -1207,6 +1274,7 @@ let vb = [
     {
         vb: "vomir",
         rad: "vom",
+        rad_imp: "vomiss",
         grp: 2,
         pp : "vomi",
         pp_id : 2
