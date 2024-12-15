@@ -72,7 +72,7 @@ export function displayExo(lsvb){
         displayQuest(verb[0], rep, count,verb[3]);
     });
     displayBtn()
-    stylizerQuest()
+    // stylizerQuest()
 }
 
 function displayPrsn(vb){
