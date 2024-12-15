@@ -611,7 +611,7 @@ function getConj(vb,tp,prsn){
     let term
     let conj
     term = getTerminaison(tp,vb.grp,prsn)
-    if (tp == "imparfait") {
+    if (tp == "imparfait" && vb.grp == 2) {
         conj = vb.rad_imp + term
     }else{
         conj = vb.rad + term 
