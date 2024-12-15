@@ -1253,6 +1253,18 @@ let vb = [
     }
 ]
 
+let auxiliaires = {
+    "être": [
+        ["suis","es","est","sommes","êtes","sont"],
+        ["étais","étais","était","étions","étiez","étaient"]
+    ],
+    "avoir": [
+        ["ai","as","a","avons","avez","ont"],
+        ["avais","avais","avait","avions","aviez","avaient"]
+    ]
+}
+
+
 window.onload = () => {
     // if (localStorage.getItem("test")){
     //     document.getElementById("btnP").addEventListener('click', () => {
@@ -1289,10 +1301,15 @@ function getRandVb(){
 function getConj(vb,tp,prsn){
     let term
     let conj
-    term = getTerminaison(tp,vb.grp,prsn)
+    
     if (tp == "imparfait" && vb.grp == 2) {
+        term = getTerminaison(tp,vb.grp,prsn)
         conj = vb.rad_imp + term
-    }else{
+    }else if (tp == "pc" || tp == "pqp") {
+        conj = getAux(vb.pp_id,prsn,tp) + " " + vb.pp 
+    }
+    else{
+        term = getTerminaison(tp,vb.grp,prsn)
         conj = vb.rad + term 
     }
     return conj
@@ -1321,15 +1338,24 @@ function testPopup(){
     Displayer.displayAlert()
 }
 
-// let verb = getRandVb()
-
-//Reste la fonction pour le résultat, reprendre en partie ce qui a été fait 
-// On affiche le resultat sur une pop up ( alert ou pop up  )
-//temps composé: il faudrait juste adapter les listes et adapter la fonction de traitement
-// Test de positionnement: affichage temps conseillé 
-
-
-
+function getAux(aux_id,prsn,tp){
+    let aux
+    if(aux_id == 1){
+        if (tp == "pc") {
+            aux = auxiliaires["être"][0][prsn-1]   
+        }else{
+            aux = auxiliaires["être"][1][prsn-1]
+        }
+        
+    }else{
+        if (tp == "pc") {
+            aux = auxiliaires["avoir"][0][prsn-1]   
+        }else{
+            aux = auxiliaires["avoir"][1][prsn-1]
+        }
+    }
+    return aux
+}
 
 
 
