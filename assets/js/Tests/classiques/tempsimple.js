@@ -113,13 +113,6 @@ let vb = [
         pp_id : 2
     },
     {
-        vb: "avancer",
-        rad: "avanc",
-        grp: 1,
-        pp : "avancé",
-        pp_id : 2
-    },
-    {
         vb: "briller",
         rad: "brill",
         grp: 1,
@@ -180,13 +173,6 @@ let vb = [
         rad: "cherch",
         grp: 1,
         pp : "cherché",
-        pp_id : 2
-    },
-    {
-        vb: "commencer",
-        rad: "commenc",
-        grp: 1,
-        pp : "commencé",
         pp_id : 2
     },
     {
@@ -477,13 +463,6 @@ let vb = [
         pp_id : 2
     },
     {
-        vb: "placer",
-        rad: "plac",
-        grp: 1,
-        pp : "placé",
-        pp_id : 1
-    },
-    {
         vb: "pleurer",
         rad: "pleur",
         grp: 1,
@@ -537,13 +516,6 @@ let vb = [
         rad: "pri",
         grp: 1,
         pp : "prié",
-        pp_id : 2
-    },
-    {
-        vb: "prononcer",
-        rad: "prononc",
-        grp: 1,
-        pp : "prononcé",
         pp_id : 2
     },
     {
