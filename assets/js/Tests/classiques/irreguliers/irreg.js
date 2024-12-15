@@ -95,12 +95,12 @@
         "allez"
       ],
       "passe_comp": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "suis allé",
+        "es allé",
+        "est allé",
+        "sommes allés",
+        "êtes allés",
+        "sont allés"
       ],
       "passe": [
         "allai",
@@ -111,12 +111,12 @@
         "allèrent"
       ],
       "plus_que_parfait": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "étais allé",
+        "étais allé",
+        "était allé",
+        "étions allés",
+        "étiez allés",
+        "étaient allés"
       ],
       "present": [
         "vais",
@@ -223,12 +223,12 @@
         "venez"
       ],
       "passe_comp": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "suis venu",
+        "es venu",
+        "est venu",
+        "sommes venus",
+        "êtes venus",
+        "sont venus"
       ],
       "passe": [
         "vins",
@@ -239,12 +239,12 @@
         "vinrent"
       ],
       "plus_que_parfait": [
-        "",
-        "",
-        "",
-        "",
-        "",
-        ""
+        "étais venu",
+        "étais venu",
+        "était venu",
+        "étions venus",
+        "étiez venus",
+        "étaient venus"
       ],
       "present": [
         "viens",
