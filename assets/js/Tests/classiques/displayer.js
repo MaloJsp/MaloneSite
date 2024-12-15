@@ -17,7 +17,7 @@ function displayQuest(vb,rep,id,p){
     mBal.innerHTML += `
         <div>
             <label for="${rep}">
-               ${libPrsn} ${vb.vb} 
+             <strong> ${libPrsn} </strong> (${vb.vb}) 
             </label>
             <input type="text" name="${vb.vb}" id=${id}>
             <div id="r${id}"></div>
