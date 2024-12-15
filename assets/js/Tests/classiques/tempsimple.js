@@ -1316,8 +1316,14 @@ function getRandVb(){
 //prsn: personne, valeurs possibles: de 1 à 6 
 function getConj(vb,tp,prsn){
     let term
+    let conj
     term = getTerminaison(tp,vb.grp,prsn)
-    return vb.rad + term
+    if (tp == "imparfait") {
+        conj = vb.rad_imp + term
+    }else{
+        conj = vb.rad + term 
+    }
+    return conj
 }
 
 // genere une liste pour les tests (pour l'instant que 2 pour tester)
