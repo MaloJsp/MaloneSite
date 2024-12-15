@@ -69,7 +69,7 @@ function displayPrsn(vb){
             libPrsn = "Je"
             break;
         case 2:
-            libPrsn = "Je"
+            libPrsn = "Tu"
             break;
         case 3:
             if (rd == 0){
