@@ -1,3 +1,4 @@
+
 //Recupère la balise ou on insere le tests
 function getMainBal(){
     return document.getElementById("exo")
@@ -13,9 +14,11 @@ export function getRandomInt(min, max) {
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher ( voir autre manière gérer id)
 function displayQuest(vb,rep,id,p){
     let mBal = getMainBal()
+    mBal.style.margin = "5%"
+    
     let libPrsn = displayPrsn(p)
     mBal.innerHTML += `
-        <div>
+        <div class="quest">
             <label for="${rep}">
                ${libPrsn} ${vb.vb} 
             </label>
