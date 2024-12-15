@@ -18,7 +18,7 @@ function displayQuest(vb,rep,id,p){
     
     let libPrsn = displayPrsn(p)
     mBal.innerHTML += `
-        <div class="quest">
+        <div class="test">
             <label for="${rep}">
               ${libPrsn} (${vb.vb}) 
             </label>
