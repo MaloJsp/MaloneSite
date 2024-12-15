@@ -15,7 +15,7 @@ export function getRandomInt(min, max) {
 function displayQuest(vb,rep,id,p){
     let mBal = getMainBal()
     mBal.style.margin = "5%"
-    
+    // mBal.style.color="black"
     let libPrsn = displayPrsn(p)
     mBal.innerHTML += `
         <div class="test">
@@ -25,8 +25,19 @@ function displayQuest(vb,rep,id,p){
             <input type="text" name="${vb.vb}" id=${id}>
             <div id="r${id}"></div>
         </div>
+        </br>
     `
     displayAlert()
+    
+}
+
+function stylizerQuest(){
+        for (let index = 1; index < 11; index++) {
+            console.log("id: ",index)
+            const element = document.getElementById(index)
+            console.log(element)
+            element.style.background = "rgb(34, 30, 30) "
+        }
 }
 
 //Affichage du bouton de validation des tests
@@ -61,6 +72,7 @@ export function displayExo(lsvb){
         displayQuest(verb[0], rep, count,verb[3]);
     });
     displayBtn()
+    stylizerQuest()
 }
 
 function displayPrsn(vb){
