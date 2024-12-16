@@ -1,4 +1,13 @@
-
+const tempLib = {
+    "present":"Présent",
+    "imparfait":"Imparfait",
+    "passe":"Passé simple",
+    "futur": "Futur",
+    "conditionnel": "Conditionnel",
+    "imperatif": "Imperatif",
+    "pc": "Passé composé",
+    "pqp": "Plus que parfait"
+}
 //Recupère la balise ou on insere le tests
 function getMainBal(){
     return document.getElementById("exo")
@@ -12,12 +21,26 @@ export function getRandomInt(min, max) {
 
 //Affichage d'une question des tests
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher ( voir autre manière gérer id)
-function displayQuest(vb,rep,id,p){
+function displayQuest(vb,rep,id,p,tp){
     let mBal = getMainBal()
     mBal.style.margin = "5%"
     // mBal.style.color="black"
+    
+
     let libPrsn = displayPrsn(p)
-    mBal.innerHTML += `
+    if (localStorage.getItem("temps") == "all"){
+        mBal.innerHTML += `
+        <div class="test">
+            <label for="${rep}">
+              ${tp}: ${libPrsn} (${vb.vb}) 
+            </label>
+            <input type="text" name="${vb.vb}" id=${id}>
+            <div id="r${id}"></div>
+        </div>
+        </br>
+    `   
+    }else{
+        mBal.innerHTML += `
         <div class="test">
             <label for="${rep}">
               ${libPrsn} (${vb.vb}) 
@@ -27,6 +50,8 @@ function displayQuest(vb,rep,id,p){
         </div>
         </br>
     `
+    }
+    
     
 }
 
@@ -66,10 +91,12 @@ function displayBtn(){
 // ]
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher
 export function displayExo(lsvb){
+    
     let count = 0
     Object.entries(lsvb).forEach(([rep, verb]) => {
         count++;
-        displayQuest(verb[0], rep, count,verb[3]);
+        
+        displayQuest(verb[0], rep, count,verb[2],verb[1]);
     });
     displayBtn()
     // stylizerQuest()

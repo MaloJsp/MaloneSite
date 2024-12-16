@@ -1265,6 +1265,7 @@ let auxiliaires = {
     ]
 }
 
+const tempslist = ["present","imparfait","futur","passe","conditionnel","imperatif","pc","pqp"]
 
 window.onload = () => {
     // if (localStorage.getItem("test")){
@@ -1274,9 +1275,14 @@ window.onload = () => {
     //     testPopup()
     // }
     localStorage.setItem("temps",document.getElementById("exo").classList[0])
-    let a = genTest()
-    Displayer.displayExo(a)
-    localStorage.setItem("reponses",[])
+    if (localStorage.getItem("temp")=="all"){
+
+    }else{
+        let a = genTest()
+        Displayer.displayExo(a)
+        localStorage.setItem("reponses",[])
+    }
+    
     // Displayer.stylizerQuest()
     // Irreg.getVbRep("futur",5)
 }
@@ -1325,25 +1331,53 @@ function genTest(){
     let tp = localStorage.getItem("temps")
     let p
     let irreg
-    if (tp=="imperatif") {
-        p = Displayer.getRandomInt(1,3)
-    }else{
-        p = Displayer.getRandomInt(1,6)
-    }
-    for (let index = 0; index < 10; index++) {
-        
-        if (Displayer.getRandomInt(1,3)<3) {
-            vb = getRandVb()
-            conj = getConj(vb,localStorage.getItem("temps"),p)
-        }else{
-            irreg = Irreg.getVbRep(tp,p)
-            vb = irreg[1]
-            conj = irreg[0]
+    if (tp != "all"){
+        for (let index = 0; index < 10; index++) {
+            if (tp=="imperatif") {
+                p = Displayer.getRandomInt(1,3)
+            }else{
+                p = Displayer.getRandomInt(1,6)
+            }
+            if (Displayer.getRandomInt(1,3)<3) {
+                vb = getRandVb()
+                conj = getConj(vb,localStorage.getItem("temps"),p)
+            }else{
+                irreg = Irreg.getVbRep(tp,p)
+                vb = irreg[1]
+                conj = irreg[0]
+            }
+            
+            tb[conj]=[vb,tp,p]
+            
         }
-        
-        tb[conj]=[vb,5,tp,p]
-        
+    }else{
+        tempslist.forEach(tpE => {
+            
+            localStorage.setItem("tpTpf",tpE)
+            
+            for (let index = 0; index < 4; index++) {
+                if (tpE=="imperatif") {
+                    p = Displayer.getRandomInt(1,3)
+                }else{
+                    p = Displayer.getRandomInt(1,6)
+                }
+                if (index<2) {
+                    vb = getRandVb()
+                    conj = getConj(vb,localStorage.tpTpf,p)
+                }else{
+                    irreg = Irreg.getVbRep(localStorage.tpTpf,p)
+                    vb = irreg[1]
+                    conj = irreg[0]
+                }
+                
+                tb[conj]=[vb,localStorage.tpTpf,p]
+                
+                
+                
+            }
+        });
     }
+    
     
     localStorage.setItem("corr",JSON.stringify(tb))
     return tb
