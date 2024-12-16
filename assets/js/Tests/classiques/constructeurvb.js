@@ -1276,7 +1276,7 @@ window.onload = () => {
     let a = genTest()
     Displayer.displayExo(a)
     localStorage.setItem("reponses",[])
-    
+    Displayer.stylizerQuest()
 }
 
 

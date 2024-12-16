@@ -30,7 +30,7 @@ function displayQuest(vb,rep,id,p){
     
 }
 
-function stylizerQuest(){
+export function stylizerQuest(){
         for (let index = 1; index < 11; index++) {
             console.log("id: ",index)
             const element = document.getElementById(index)
