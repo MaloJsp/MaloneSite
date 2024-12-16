@@ -1334,9 +1334,7 @@ function genTest(){
     return tb
 }
 
-function testPopup(){
-    Displayer.displayAlert()
-}
+
 
 function getAux(aux_id,prsn,tp){
     let aux
