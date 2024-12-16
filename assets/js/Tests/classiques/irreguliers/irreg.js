@@ -1,4 +1,6 @@
-[
+
+
+let vbs =[
     {
       "infinitif": "faire",
       "conditionnel": [
@@ -30,7 +32,7 @@
         "faisons",
         "faites"
       ],
-      "passe_comp": [
+      "pc": [
         "ai fait",
         "as fait",
         "a fait",
@@ -46,7 +48,7 @@
         "fîtes",
         "firent"
       ],
-      "plus_que_parfait": [
+      "pqp": [
         "avais fait",
         "avais fait",
         "avait fait",
@@ -94,7 +96,7 @@
         "allons",
         "allez"
       ],
-      "passe_comp": [
+      "pc": [
         "suis allé",
         "es allé",
         "est allé",
@@ -110,7 +112,7 @@
         "allâtes",
         "allèrent"
       ],
-      "plus_que_parfait": [
+      "pqp": [
         "étais allé",
         "étais allé",
         "était allé",
@@ -158,7 +160,7 @@
         "disons",
         "dites"
       ],
-      "passe_comp": [
+      "pc": [
         "ai dit",
         "as dit",
         "a dit",
@@ -174,7 +176,7 @@
         "dîtes",
         "dirent"
       ],
-      "plus_que_parfait": [
+      "pqp": [
         "avais dit",
         "avais dit",
         "avait dit",
@@ -222,7 +224,7 @@
         "venons",
         "venez"
       ],
-      "passe_comp": [
+      "pc": [
         "suis venu",
         "es venu",
         "est venu",
@@ -238,7 +240,7 @@
         "vîntes",
         "vinrent"
       ],
-      "plus_que_parfait": [
+      "pqp": [
         "étais venu",
         "étais venu",
         "était venu",
@@ -281,7 +283,7 @@
         "pouviez",
         "pouvaient"
       ],
-      "passe_comp": [
+      "pc": [
         "ai pu",
         "as pu",
         "a pu",
@@ -297,7 +299,7 @@
         "pûtes",
         "purent"
       ],
-      "plus_que_parfait": [
+      "pqp": [
         "avais pu",
         "avais pu",
         "avait pu",
@@ -345,7 +347,7 @@
         "voyons",
         "voyez"
       ],
-      "passe_comp": [
+      "pc": [
         "ai vu",
         "as vu",
         "a vu",
@@ -361,7 +363,7 @@
         "vîtes",
         "virent"
       ],
-      "plus_que_parfait": [
+      "pqp": [
         "avais vu",
         "avais vu",
         "avait vu",
@@ -409,7 +411,7 @@
         "veuillons",
         "veuillez"
       ],
-      "passe_comp": [
+      "pc": [
         "ai voulu",
         "as voulu",
         "a voulu",
@@ -425,7 +427,7 @@
         "voulûtes",
         "voulurent"
       ],
-      "plus_que_parfait": [
+      "pqp": [
         "avais voulu",
         "avais voulu",
         "avait voulu",
@@ -473,7 +475,7 @@
         "prenons",
         "prenez"
       ],
-      "passe_comp": [
+      "pc": [
         "ai pris",
         "as pris",
         "a pris",
@@ -489,7 +491,7 @@
         "prîtes",
         "prirent"
       ],
-      "plus_que_parfait": [
+      "pqp": [
         "avais pris",
         "avais pris",
         "avait pris",
@@ -507,3 +509,10 @@
       ]
     }
 ]
+
+
+export function getVbRep(tp,prsn){
+  let vbAllTp = vbs[Math.floor(Math.random() * ((vbs.length -1) - 0 + 1)) + 0]
+  let vb = vbAllTp[tp][prsn - 1]
+  return [vb, {vb:vbAllTp["infinitif"]}]
+}

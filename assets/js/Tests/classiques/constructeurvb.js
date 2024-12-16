@@ -1,4 +1,5 @@
 import * as Displayer from "./displayer.js"
+import * as Irreg from "./irreguliers/irreg.js"
 
 let terminaisons = {
     "present": [
@@ -1276,7 +1277,8 @@ window.onload = () => {
     let a = genTest()
     Displayer.displayExo(a)
     localStorage.setItem("reponses",[])
-    Displayer.stylizerQuest()
+    // Displayer.stylizerQuest()
+    // Irreg.getVbRep("futur",5)
 }
 
 
@@ -1320,14 +1322,27 @@ function genTest(){
     let tb={}
     let conj
     let vb
-    let tp
+    let tp = localStorage.getItem("temps")
     let p
-    for (let index = 0; index < 10; index++) {
+    let irreg
+    if (tp=="imperatif") {
+        p = Displayer.getRandomInt(1,3)
+    }else{
         p = Displayer.getRandomInt(1,6)
-        vb = getRandVb()
-        conj = getConj(vb,localStorage.getItem("temps"),p)
-        tp = localStorage.getItem("temps")
+    }
+    for (let index = 0; index < 10; index++) {
+        
+        if (Displayer.getRandomInt(1,3)<3) {
+            vb = getRandVb()
+            conj = getConj(vb,localStorage.getItem("temps"),p)
+        }else{
+            irreg = Irreg.getVbRep(tp,p)
+            vb = irreg[1]
+            conj = irreg[0]
+        }
+        
         tb[conj]=[vb,5,tp,p]
+        
     }
     
     localStorage.setItem("corr",JSON.stringify(tb))
@@ -1355,21 +1370,6 @@ function getAux(aux_id,prsn,tp){
     return aux
 }
 
-function calcP100(){
-    let tabP100 = {
-        "present": 0,
-        "imparfait": 0,
-        "passe": 0,
-        "conditionnel": 0,
-        "futur": 0,
-        "imperatif": 0,
-        "pc": 0,
-        "pqp": 0
-    }
 
-    Object.entries(JSON.parse(localStorage.getItem("corr"))).forEach(([rep, verb]) => {
-        console.log(rep, ": ",verb)
-    });
-}
 
 

@@ -6,7 +6,7 @@ function getMainBal(){
 
 // Fonction utilitaire qui genere un entier entre min et max
 export function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 
@@ -32,9 +32,9 @@ function displayQuest(vb,rep,id,p){
 
 export function stylizerQuest(){
         for (let index = 1; index < 11; index++) {
-            console.log("id: ",index)
+            
             const element = document.getElementById(index)
-            console.log(element)
+            
             element.style.background = "rgb(34, 30, 30) "
         }
 }
@@ -50,7 +50,8 @@ function displayBtn(){
         let tab = []
         for (let index = 1; index < 11; index++) {
             inp = document.getElementById(index)
-            // console.log(inp)
+            // 
+            
             tab[index-1]=inp.value
         }
         localStorage.setItem("reponses",JSON.stringify(tab))
@@ -117,6 +118,7 @@ function verifRep(){
     let count = 0
     let tabCheck = []
     Object.entries(corr).forEach(([rep, verb]) => {
+        
         tabCheck[count]= rep.trim() == inputs[count].trim()
         count++
     });
@@ -131,7 +133,7 @@ function colorError(tabCheck){
     for (let index = 0; index < 10; index++) {
         bal = document.getElementById(index+1)
         bal.disabled = ! localStorage.getItem("temps") == "all"
-        // console.log(getMainBal())
+        // )
         bal.disabled = true
         if (tabCheck[index]) {
             bal.style.color = "green"
@@ -148,7 +150,7 @@ function displayGoodRep(chk){
     Object.entries(JSON.parse(localStorage.getItem("corr"))).forEach(([rep, verb]) => {
         repL.push(rep)
     });
-    console.log(repL)
+    
     for (let index = 1; index < 11; index++) {
         if(!chk[index-1]){
             balRep =  document.getElementById("r"+(index))
