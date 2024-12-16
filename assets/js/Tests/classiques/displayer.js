@@ -27,7 +27,6 @@ function displayQuest(vb,rep,id,p){
         </div>
         </br>
     `
-    displayAlert()
     
 }
 

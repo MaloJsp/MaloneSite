@@ -1355,5 +1355,22 @@ function getAux(aux_id,prsn,tp){
     return aux
 }
 
+function calcP100(){
+    let tabP100 = {
+        "present": 0,
+        "imparfait": 0,
+        "passe": 0,
+        "conditionnel": 0,
+        "futur": 0,
+        "imperatif": 0,
+        "pc": 0,
+        "pqp": 0
+    }
+
+    for (let index = 0; index < array.length; index++) {
+        const element = array[index];
+        
+    }
+}
 
 
