@@ -1367,10 +1367,9 @@ function calcP100(){
         "pqp": 0
     }
 
-    for (let index = 0; index < array.length; index++) {
-        const element = array[index];
-        
-    }
+    Object.entries(JSON.parse(localStorage.getItem("corr"))).forEach(([rep, verb]) => {
+        console.log(rep, ": ",verb)
+    });
 }
 
 

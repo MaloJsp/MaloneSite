@@ -160,7 +160,7 @@ function displayGoodRep(chk){
     }
 }
 
-function displayModall(){
+function displayModal(){
     if (localStorage.getItem("temps") == "all"){
         document.getElementById("myModal")
     }
