@@ -9,7 +9,15 @@
     <script type="module" src="../assets/js/Tests/classiques/tempsimple.js"></script>
     <div id="exo"></div>
     <b>test</b>
-    <div id="myModal" class="modal">TEST</div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>Some text in the Modal..</p>
+        </div>
+      
+      </div>
     <button id="myBtn"></button>
 
     <script>
@@ -20,7 +28,7 @@ var modal = document.getElementById("myModal");
 var btn = document.getElementById("myBtn");
 
 // Get the <span> element that closes the modal
-// var span = document.getElementsByClassName("close")[0];
+var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
 btn.onclick = function() {
@@ -28,9 +36,9 @@ btn.onclick = function() {
 }
 
 // When the user clicks on <span> (x), close the modal
-// span.onclick = function() {
-//   modal.style.display = "none";
-// }
+span.onclick = function() {
+  modal.style.display = "none";
+}
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
