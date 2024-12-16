@@ -126,44 +126,6 @@ function verifRep(){
     localStorage.setItem("chk",tabCheck)
 }
 
-export function displayAlert(){
-    let bal = getMainBal()
-    bal.innerHTML += `
-    <style>
-        /* Style de l'arrière-plan semi-transparent */
-        .modal {
-            display: none; /* Masquée par défaut */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-        }
-
-        .modal-content {
-            position: relative;
-            margin: 10% auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            width: 80%;
-            max-width: 400px;
-            text-align: center;
-        }
-    </style>
-       <div id="modal" class="modal">
-        <div class="modal-content">
-            <button class="close-btn" id="closeModalBtn">&times;</button>
-            <h2>Voici une popup</h2>
-            <p>Vous pouvez y ajouter votre contenu.</p>
-        </div>
-    </div>
-
-    `
-
-}
 
 function colorError(tabCheck){
     let bal
@@ -196,5 +158,11 @@ function displayGoodRep(chk){
             `
         }
         
+    }
+}
+
+function displayModall(){
+    if (localStorage.getItem("temps") == "all"){
+        document.getElementById("myModal")
     }
 }
