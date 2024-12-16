@@ -56,7 +56,7 @@ function displayQuest(vb,rep,id,p,tp){
 }
 
 export function stylizerQuest(){
-        for (let index = 1; index < 11; index++) {
+        for (let index = 1; index < localStorage.corr.length ; index++) {
             
             const element = document.getElementById(index)
             
@@ -73,10 +73,15 @@ function displayBtn(){
     document.getElementById("Vbtn").onclick = () => {
         let inp
         let tab = []
-        for (let index = 1; index < 11; index++) {
+        let nbq
+        if (localStorage.temps == "all"){
+             nbq = 32
+        }else{
+             nbq = 10
+        }
+        for (let index = 1; index < nbq ; index++) {
             inp = document.getElementById(index)
-            // 
-            
+             console.log(inp)
             tab[index-1]=inp.value
         }
         localStorage.setItem("reponses",JSON.stringify(tab))
@@ -94,8 +99,8 @@ export function displayExo(lsvb){
     
     let count = 0
     Object.entries(lsvb).forEach(([rep, verb]) => {
-        count++;
         
+        count++;
         displayQuest(verb[0], rep, count,verb[2],verb[1]);
     });
     displayBtn()
@@ -144,6 +149,7 @@ function verifRep(){
     let corr = JSON.parse(localStorage.getItem("corr"))
     let count = 0
     let tabCheck = []
+    
     Object.entries(corr).forEach(([rep, verb]) => {
         
         tabCheck[count]= rep.trim() == inputs[count].trim()
@@ -151,13 +157,48 @@ function verifRep(){
     });
     colorError(tabCheck)
     displayGoodRep(tabCheck)
+    calcStat(tabCheck)
     localStorage.setItem("chk",tabCheck)
 }
 
+function calcStat(chk){
+    let stat = {
+        "present":0,
+        "imparfait":0,
+        "futur":0,
+        "passe": 0,
+        "conditionnel": 0,
+        "imperatif": 0,
+        "pc": 0,
+        "pqp": 0
+    }
+    let count = 0
+    chk.forEach(element => {
+        count ++
+        if (count<5){
+            if(element){stat["present"]++}
+        }else if (count>=5 && count<9){
+            if(element){stat["imparfait"]++}
+        }else if(count >=9 && count<13){
+            if(element){stat["futur"]++}
+        }else if(count >=13 && count<17){
+            if(element){stat["passe"]++}
+        }else if(count >=17 && count<21){
+            if(element){stat["conditionnel"]++}
+        }else if(count >=21 && count<25){
+            if(element){stat["imperatif"]++}
+        }else if(count >=25 && count<29){
+            if(element){stat["pc"]++}
+        }else{
+            if(element){stat["pqp"]++}
+        }
+    })
+    
+}
 
 function colorError(tabCheck){
     let bal
-    for (let index = 0; index < 10; index++) {
+    for (let index = 0; index < localStorage.corr.length ; index++) {
         bal = document.getElementById(index+1)
         bal.disabled = ! localStorage.getItem("temps") == "all"
         // )
@@ -178,7 +219,7 @@ function displayGoodRep(chk){
         repL.push(rep)
     });
     
-    for (let index = 1; index < 11; index++) {
+    for (let index = 1; index < localStorage.corr.length ; index++) {
         if(!chk[index-1]){
             balRep =  document.getElementById("r"+(index))
             balRep.innerHTML = `

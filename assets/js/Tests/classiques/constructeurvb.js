@@ -1275,13 +1275,11 @@ window.onload = () => {
     //     testPopup()
     // }
     localStorage.setItem("temps",document.getElementById("exo").classList[0])
-    if (localStorage.getItem("temp")=="all"){
-
-    }else{
-        let a = genTest()
-        Displayer.displayExo(a)
-        localStorage.setItem("reponses",[])
-    }
+    
+    let a = genTest()
+    Displayer.displayExo(a)
+    localStorage.setItem("reponses",[])
+    
     
     // Displayer.stylizerQuest()
     // Irreg.getVbRep("futur",5)
@@ -1377,7 +1375,6 @@ function genTest(){
             }
         });
     }
-    
     
     localStorage.setItem("corr",JSON.stringify(tb))
     return tb
