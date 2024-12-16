@@ -1307,6 +1307,8 @@ function getConj(vb,tp,prsn){
         conj = vb.rad_imp + term
     }else if (tp == "pc" || tp == "pqp") {
         conj = getAux(vb.pp_id,prsn,tp) + " " + vb.pp 
+    }else if (tp == "futur"){
+        calcP100()
     }
     else{
         term = getTerminaison(tp,vb.grp,prsn)
