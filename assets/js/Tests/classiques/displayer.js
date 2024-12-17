@@ -151,7 +151,7 @@ function verifRep(){
     let tabCheck = []
     
     Object.entries(corr).forEach(([rep, verb]) => {
-        
+        console.log("inputs: ",inputs[count])
         tabCheck[count]= rep.trim() == inputs[count].trim()
         count++
     });
