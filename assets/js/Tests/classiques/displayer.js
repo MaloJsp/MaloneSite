@@ -198,9 +198,9 @@ function calcStat(chk){
 
 function colorError(tabCheck){
     let bal
-    for (let index = 0; index < localStorage.corr.length ; index++) {
+    for (let index = 0; index < localStorage.corr.length -1 ; index++) {
         bal = document.getElementById(index+1)
-        bal.disabled = ! localStorage.getItem("temps") == "all"
+        // bal.disabled = ! localStorage.getItem("temps") == "all"
         // )
         bal.disabled = true
         if (tabCheck[index]) {
