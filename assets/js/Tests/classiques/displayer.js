@@ -32,7 +32,7 @@ function displayQuest(vb,rep,id,p,tp){
         mBal.innerHTML += `
         <div class="test">
             <label for="${rep}">
-              ${tp}: ${libPrsn} (${vb.vb}) 
+              ${tempLib[tp]} : ${libPrsn} (${vb.vb}) 
             </label>
             <input type="text" name="${vb.vb}" id=${id}>
             <div id="r${id}"></div>
@@ -262,7 +262,7 @@ function displayModal(stat){
           
           <div class="left-panel" id="lPanne">
                 <p>Résultat total: ${stat.total} / 32</p>
-                <div> Temps Simples: ${stat.ts} /4  Temps Composés: ${stat.tc} </div>
+                <div> Temps Simples: ${stat.ts} /24 | Temps Composés: ${stat.tc} / 8 </div>
                 <div> Présent : ${stat.present} / 4 </div>
                 <div> Futur : ${stat.futur} / 4 </div>
                 <div> Passé simple : ${stat.passe} / 4 </div>
