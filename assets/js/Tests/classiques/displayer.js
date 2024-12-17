@@ -56,7 +56,13 @@ function displayQuest(vb,rep,id,p,tp){
 }
 
 export function stylizerQuest(){
-        for (let index = 1; index < localStorage.corr.length ; index++) {
+    let nbq
+        if (localStorage.temps == "all"){
+             nbq = 32
+        }else{
+             nbq = 10
+        }
+        for (let index = 1; index < nbq ; index++) {
             
             const element = document.getElementById(index)
             
@@ -79,9 +85,8 @@ function displayBtn(){
         }else{
              nbq = 10
         }
-        for (let index = 1; index < nbq  ; index++) {
+        for (let index = 1; index < nbq +1 ; index++) {
             inp = document.getElementById(index)
-             console.log(inp)
             tab[index-1]=inp.value
         }
         localStorage.setItem("reponses",JSON.stringify(tab))
@@ -151,14 +156,18 @@ function verifRep(){
     let tabCheck = []
     
     Object.entries(corr).forEach(([rep, verb]) => {
-        console.log("inputs: ",inputs[count])
+        console.log("inp: ",inputs)
         tabCheck[count]= rep.trim() == inputs[count].trim()
         count++
     });
     colorError(tabCheck)
     displayGoodRep(tabCheck)
-    calcStat(tabCheck)
+    
     localStorage.setItem("chk",tabCheck)
+    if (localStorage.temps == "all"){
+        displayModal(calcStat(tabCheck))
+    }
+
 }
 
 function calcStat(chk){
@@ -170,11 +179,13 @@ function calcStat(chk){
         "conditionnel": 0,
         "imperatif": 0,
         "pc": 0,
-        "pqp": 0
+        "pqp": 0,
+        "total": 0
     }
     let count = 0
     chk.forEach(element => {
         count ++
+        if(element){stat["total"] ++}
         if (count<5){
             if(element){stat["present"]++}
         }else if (count>=5 && count<9){
@@ -193,15 +204,20 @@ function calcStat(chk){
             if(element){stat["pqp"]++}
         }
     })
+    return stat
     
 }
 
 function colorError(tabCheck){
     let bal
-    for (let index = 0; index < localStorage.corr.length -1 ; index++) {
-        bal = document.getElementById(index)
-        // bal.disabled = ! localStorage.getItem("temps") == "all"
-        // )
+    let nbq
+    if (localStorage.temps == "all"){
+         nbq = 32
+    }else{
+         nbq = 10
+    }    for (let index = 0; index < nbq ; index++) {
+        bal = document.getElementById(index +1)
+        console.log(index)
         bal.disabled = true
         if (tabCheck[index]) {
             bal.style.color = "green"
@@ -218,8 +234,13 @@ function displayGoodRep(chk){
     Object.entries(JSON.parse(localStorage.getItem("corr"))).forEach(([rep, verb]) => {
         repL.push(rep)
     });
-    
-    for (let index = 1; index < localStorage.corr.length ; index++) {
+    let nbq
+        if (localStorage.temps == "all"){
+             nbq = 32
+        }else{
+             nbq = 10
+        }
+    for (let index = 1; index < nbq +1 ; index++) {
         if(!chk[index-1]){
             balRep =  document.getElementById("r"+(index))
             balRep.innerHTML = `
@@ -230,8 +251,83 @@ function displayGoodRep(chk){
     }
 }
 
-function displayModal(){
-    if (localStorage.getItem("temps") == "all"){
-        document.getElementById("myModal")
-    }
+function displayModal(stat){
+        getMainBal().innerHTML += `
+            <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content" style:"color: black;">
+          
+          <div class="left-panel" id="lPanne">
+                <p>Résultat total: ${stat.total} / 32</p>
+            </div>
+            <div class="right-panel">
+                <p>Contenu de la partie droite.</p>
+            </div>
+            <span class="close">&times;</span>
+
+        </div>
+      
+      </div>
+       <style>
+    .modal {
+        display: none; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+      
+      /* Modal Content/Box */
+      .modal-content {
+      color: black;
+          display: flex;
+        background-color: #fefefe;
+        margin: 15% auto; /* 15% from the top and centered */
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; /* Could be more or less, depending on screen size */
+      }
+      
+      /* The Close Button */
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .left-panel {
+    flex: 1;
+    text-align: center;
+}
+
+/* Panneau droit */
+.right-panel {
+    flex: 1;
+    text-align: center;
+}
+    </style>
+
+        `
+        let mod =document.getElementById("myModal")
+        mod.style.display = "block";
+
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() {
+            mod.style.display = "none";
+          }
 }
