@@ -22,17 +22,26 @@ export function getRandomInt(min, max) {
 //Affichage d'une question des tests
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher ( voir autre manière gérer id)
 function displayQuest(vb,rep,id,p,tp){
+    console.log("variable vb: ",vb)
     let mBal = getMainBal()
     mBal.style.margin = "5%"
     // mBal.style.color="black"
-    
+    let aux= ""
+    if(tp == "pc" || tp == "pqp"){
+        if(vb.pp_id == 1){
+            aux = "être"
+        }else{
+            
+            aux = "avoir"
+        }
+    }
 
     let libPrsn = displayPrsn(p)
     if (localStorage.getItem("temps") == "all"){
         mBal.innerHTML += `
         <div class="test">
             <label for="${rep}">
-              ${tempLib[tp]} : ${libPrsn} (${vb.vb}) 
+              ${tempLib[tp]} : ${libPrsn} (${aux} ${vb.vb}) 
             </label>
             <input type="text" name="${vb.vb}" id=${id}>
             <div id="r${id}"></div>
@@ -53,6 +62,10 @@ function displayQuest(vb,rep,id,p,tp){
     }
     
     
+}
+
+function displaySentence(tot){
+    if(tot<16){return "BAD"}else if(tot>=16 && tot<26){return "NOT BAD"}else if(tot>=26 && tot<32){return "EXCELLENT"}else{return "BEST"}
 }
 
 export function stylizerQuest(){
@@ -156,7 +169,7 @@ function verifRep(){
     let tabCheck = []
     
     Object.entries(corr).forEach(([rep, verb]) => {
-        console.log("inp: ",inputs)
+        
         tabCheck[count]= rep.trim() == inputs[count].trim()
         count++
     });
@@ -219,7 +232,7 @@ function colorError(tabCheck){
          nbq = 10
     }    for (let index = 0; index < nbq ; index++) {
         bal = document.getElementById(index +1)
-        console.log(index)
+        
         bal.disabled = true
         if (tabCheck[index]) {
             bal.style.color = "green"
@@ -254,6 +267,14 @@ function displayGoodRep(chk){
 }
 
 function displayModal(stat){
+        let rPann = ""
+        if (!JSON.parse(localStorage.isFinal)) {
+            rPann = `
+            <div class="right-panel">
+                <p>Phrase petit bateau</p>
+            </div>
+            `
+        }
         getMainBal().innerHTML += `
             <div id="myModal" class="modal">
 
@@ -271,11 +292,9 @@ function displayModal(stat){
                 <div> Imparfait : ${stat.imparfait} / 4 </div>
                 <div> Passé composé : ${stat.pc} / 4 </div>
                 <div> Plus-que-parfait : ${stat.pqp} / 4 </div>
-               
+                <div> ${displaySentence(stat.total)} </div>
             </div>
-            <div class="right-panel">
-                <p>Contenu de la partie droite.</p>
-            </div>
+            ${rPann}
             <span class="close">&times;</span>
 
         </div>
@@ -342,4 +361,18 @@ function displayModal(stat){
         span.onclick = function() {
             mod.style.display = "none";
           }
+}
+
+function trierStat(stat) {
+    // Convertir l'objet en tableau de paires [clé, valeur]
+    let entries = Object.entries(stat);
+
+    // Trier le tableau selon les valeurs (croissantes)
+    entries.sort((a, b) => a[1] - b[1]);
+
+    // Remplacer chaque clé par son libellé à l'aide de tempLib
+    let sortedLibelles = entries.map(entry => tempLib[entry[0]] || entry[0]);
+
+    // Joindre les libellés dans une chaîne de caractères
+    return sortedLibelles.join(", ");
 }

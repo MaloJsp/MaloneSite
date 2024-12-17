@@ -3,6 +3,7 @@
 let vbs =[
     {
       "infinitif": "faire",
+      "pp_id": 2,
       "conditionnel": [
         "ferais",
         "ferais",
@@ -67,6 +68,7 @@ let vbs =[
     },
     {
       "infinitif": "aller",
+      "pp_id": 1,
       "conditionnel": [
         "irais",
         "irais",
@@ -131,6 +133,7 @@ let vbs =[
     },
     {
       "infinitif": "dire",
+      "pp_id": 2,
       "conditionnel": [
         "dirais",
         "dirais",
@@ -195,6 +198,7 @@ let vbs =[
     },
     {
       "infinitif": "venir",
+      "pp_id": 1,
       "conditionnel": [
         "viendrais",
         "viendrais",
@@ -259,6 +263,7 @@ let vbs =[
     },
     {
       "infinitif": "pouvoir",
+      "pp_id": 2,
       "conditionnel": [
         "pourrais",
         "pourrais",
@@ -318,6 +323,7 @@ let vbs =[
     },
     {
       "infinitif": "voir",
+      "pp_id": 2,
       "conditionnel": [
         "verrais",
         "verrais",
@@ -382,6 +388,7 @@ let vbs =[
     },
     {
       "infinitif": "vouloir",
+      "pp_id": 2,
       "conditionnel": [
         "voudrais",
         "voudrais",
@@ -446,6 +453,7 @@ let vbs =[
     },
     {
       "infinitif": "prendre",
+      "pp_id": 2,
       "conditionnel": [
         "prendrais",
         "prendrais",
@@ -514,5 +522,5 @@ let vbs =[
 export function getVbRep(tp,prsn){
   let vbAllTp = vbs[Math.floor(Math.random() * ((vbs.length -1) - 0 + 1)) + 0]
   let vb = vbAllTp[tp][prsn - 1]
-  return [vb, {vb:vbAllTp["infinitif"]}]
+  return [vb, {vb:vbAllTp["infinitif"],pp_id:vbAllTp["pp_id"]}]
 }

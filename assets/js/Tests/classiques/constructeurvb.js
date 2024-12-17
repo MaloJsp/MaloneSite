@@ -1275,7 +1275,11 @@ window.onload = () => {
     //     testPopup()
     // }
     localStorage.setItem("temps",document.getElementById("exo").classList[0])
-    
+    if (document.getElementById("exo").classList[1] != undefined) {
+        localStorage.setItem("isFinal",true)
+    }else{
+        localStorage.setItem("isFinal",false)
+    }
     let a = genTest()
     Displayer.displayExo(a)
     localStorage.setItem("reponses",[])
