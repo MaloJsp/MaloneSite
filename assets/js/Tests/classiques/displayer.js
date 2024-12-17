@@ -79,7 +79,7 @@ function displayBtn(){
         }else{
              nbq = 10
         }
-        for (let index = 1; index < nbq ; index++) {
+        for (let index = 1; index < nbq +1 ; index++) {
             inp = document.getElementById(index)
              console.log(inp)
             tab[index-1]=inp.value
