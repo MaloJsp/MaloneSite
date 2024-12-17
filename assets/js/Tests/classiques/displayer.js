@@ -272,6 +272,7 @@ function displayModal(stat){
             rPann = `
             <div class="right-panel">
                 <p>Phrase petit bateau</p>
+                <div> ${trierStat(stat)} </div>
             </div>
             `
         }
@@ -370,8 +371,10 @@ function trierStat(stat) {
     // Trier le tableau selon les valeurs (croissantes)
     entries.sort((a, b) => a[1] - b[1]);
 
-    // Remplacer chaque clé par son libellé à l'aide de tempLib
-    let sortedLibelles = entries.map(entry => tempLib[entry[0]] || entry[0]);
+    // Filtrer les clés qui ont un libellé dans tempLib et les convertir en libellés
+    let sortedLibelles = entries
+        .filter(entry => tempLib.hasOwnProperty(entry[0])) // Garde seulement les clés présentes dans tempLib
+        .map(entry => tempLib[entry[0]]); // Remplace par les libellés
 
     // Joindre les libellés dans une chaîne de caractères
     return sortedLibelles.join(", ");
