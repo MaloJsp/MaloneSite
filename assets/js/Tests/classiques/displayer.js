@@ -180,6 +180,8 @@ function calcStat(chk){
         "imperatif": 0,
         "pc": 0,
         "pqp": 0,
+        "ts": 0,
+        "tc": 0,
         "total": 0
     }
     let count = 0
@@ -187,21 +189,21 @@ function calcStat(chk){
         count ++
         if(element){stat["total"] ++}
         if (count<5){
-            if(element){stat["present"]++}
+            if(element){stat["present"]++;stat["ts"]++}
         }else if (count>=5 && count<9){
-            if(element){stat["imparfait"]++}
+            if(element){stat["imparfait"]++;stat["ts"]++}
         }else if(count >=9 && count<13){
-            if(element){stat["futur"]++}
+            if(element){stat["futur"]++;stat["ts"]++}
         }else if(count >=13 && count<17){
-            if(element){stat["passe"]++}
+            if(element){stat["passe"]++;stat["ts"]++}
         }else if(count >=17 && count<21){
-            if(element){stat["conditionnel"]++}
+            if(element){stat["conditionnel"]++;stat["ts"]++}
         }else if(count >=21 && count<25){
-            if(element){stat["imperatif"]++}
+            if(element){stat["imperatif"]++;stat["ts"]++}
         }else if(count >=25 && count<29){
-            if(element){stat["pc"]++}
+            if(element){stat["pc"]++;stat["tc"]++}
         }else{
-            if(element){stat["pqp"]++}
+            if(element){stat["pqp"]++;stat["tc"]++}
         }
     })
     return stat
@@ -260,6 +262,16 @@ function displayModal(stat){
           
           <div class="left-panel" id="lPanne">
                 <p>Résultat total: ${stat.total} / 32</p>
+                <div> Temps Simples: ${stat.ts} /4  Temps Composés: ${stat.tc} </div>
+                <div> Présent : ${stat.present} / 4 </div>
+                <div> Futur : ${stat.futur} / 4 </div>
+                <div> Passé simple : ${stat.passe} / 4 </div>
+                <div> Impératif : ${stat.imperatif} / 4 </div>
+                <div> Conditionnel : ${stat.conditionnel} / 4 </div>
+                <div> Imparfait : ${stat.imparfait} / 4 </div>
+                <div> Passé composé : ${stat.pc} / 4 </div>
+                <div> Plus-que-parfait : ${stat.pqp} / 4 </div>
+               
             </div>
             <div class="right-panel">
                 <p>Contenu de la partie droite.</p>
@@ -288,7 +300,7 @@ function displayModal(stat){
       color: black;
           display: flex;
         background-color: #fefefe;
-        margin: 15% auto; /* 15% from the top and centered */
+        margin: 5% auto; /* 15% from the top and centered */
         padding: 20px;
         border: 1px solid #888;
         width: 80%; /* Could be more or less, depending on screen size */
