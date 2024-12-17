@@ -36,7 +36,7 @@ function displayQuest(vb,rep,id,p,tp){
         }
     }
 
-    let libPrsn = displayPrsn(p)
+    let libPrsn = displayPrsn(p,tp)
     if (localStorage.getItem("temps") == "all"){
         mBal.innerHTML += `
         <div class="test">
@@ -125,23 +125,37 @@ export function displayExo(lsvb){
     // stylizerQuest()
 }
 
-function displayPrsn(vb){
+function displayPrsn(vb,tp){
     let idPrsn = vb
     let libPrsn = ""
     let rd =  getRandomInt(0,1)
     switch (idPrsn) {
         case 1:
-            libPrsn = "Je"
+            if(tp == "imperatif"){
+                libPrsn = "Tu"
+            }else{
+                libPrsn = "Je"
+            }
+            
             break;
         case 2:
-            libPrsn = "Tu"
+            if(tp == "imperatif"){
+                libPrsn = "Nous"
+            }else{
+                libPrsn = "Tu"
+            }
             break;
         case 3:
-            if (rd == 0){
-                libPrsn = "Elle"
+            if(tp == "imperatif"){
+                libPrsn = "Vous"
             }else{
-                libPrsn = "Il"
+                if (rd == 0){
+                    libPrsn = "Elle"
+                }else{
+                    libPrsn = "Il"
+                }
             }
+            
             break;
         case 4:
             libPrsn = "Nous"

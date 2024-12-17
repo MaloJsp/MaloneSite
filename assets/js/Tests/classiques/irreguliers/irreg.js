@@ -184,7 +184,7 @@ let vbs =[
         "avais dit",
         "avait dit",
         "avons dit",
-        "avez dit",
+        "aviez dit",
         "avaient dit"
       ],
       "present": [
