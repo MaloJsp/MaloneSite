@@ -22,7 +22,7 @@ export function getRandomInt(min, max) {
 //Affichage d'une question des tests
 // reste à gérer les doublons car n'affiche pas la question si vb déjà afficher ( voir autre manière gérer id)
 function displayQuest(vb,rep,id,p,tp){
-    console.log("variable vb: ",vb)
+    
     let mBal = getMainBal()
     mBal.style.margin = "5%"
     // mBal.style.color="black"
@@ -128,7 +128,6 @@ export function displayExo(lsvb){
 function displayPrsn(vb,tp){
     let idPrsn = vb
     let libPrsn = ""
-    let rd =  getRandomInt(0,1)
     switch (idPrsn) {
         case 1:
             if(tp == "imperatif"){
@@ -149,11 +148,9 @@ function displayPrsn(vb,tp){
             if(tp == "imperatif"){
                 libPrsn = "Vous"
             }else{
-                if (rd == 0){
-                    libPrsn = "Elle"
-                }else{
-                    libPrsn = "Il"
-                }
+
+                libPrsn = "Il"
+                
             }
             
             break;
@@ -164,11 +161,9 @@ function displayPrsn(vb,tp){
             libPrsn = "Vous"
             break;
         case 6:
-            if (rd == 0){
-                libPrsn = "Elles"
-            }else{
-                libPrsn = "Ils"
-            }
+
+            libPrsn = "Ils"
+            
             break;
         default:
             break;

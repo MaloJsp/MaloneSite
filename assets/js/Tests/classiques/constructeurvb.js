@@ -1317,6 +1317,8 @@ function getConj(vb,tp,prsn){
         conj = vb.rad_imp + term
     }else if (tp == "pc" || tp == "pqp") {
         conj = getAux(vb.pp_id,prsn,tp) + " " + vb.pp 
+        if(prsn>=3 && vb.pp_id == 1){conj += "s"}
+        console.log(conj, "  ",prsn,"  ",vb.pp_id)
     }
     else{
         term = getTerminaison(tp,vb.grp,prsn)
@@ -1402,6 +1404,7 @@ function getAux(aux_id,prsn,tp){
             aux = auxiliaires["avoir"][1][prsn-1]
         }
     }
+
     return aux
 }
 
