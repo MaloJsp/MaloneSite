@@ -52,7 +52,7 @@ function displayQuest(vb,rep,id,p,tp){
         mBal.innerHTML += `
         <div class="test">
             <label for="${rep}">
-              ${libPrsn} (${vb.vb}) 
+              ${libPrsn} (${aux} ${vb.vb})
             </label>
             <input type="text" name="${vb.vb}" id=${id}>
             <div id="r${id}"></div>
@@ -100,6 +100,7 @@ function displayBtn(){
         }
         for (let index = 1; index < nbq +1 ; index++) {
             inp = document.getElementById(index)
+            console.log("INPP: ",inp)
             tab[index-1]=inp.value
         }
         localStorage.setItem("reponses",JSON.stringify(tab))
@@ -182,7 +183,7 @@ function verifRep(){
         tabCheck[count]= rep.trim() == inputs[count].trim()
         count++
     });
-    colorError(tabCheck)
+    // colorError(tabCheck)
     displayGoodRep(tabCheck)
     
     localStorage.setItem("chk",tabCheck)
@@ -373,6 +374,9 @@ function displayModal(stat){
           }
 }
 
+
+
+// Fonction pour trier et récupérer les libellés sous forme de liste à puces (texte brut avec interpolation)
 function trierStat(stat) {
     // Convertir l'objet en tableau de paires [clé, valeur]
     let entries = Object.entries(stat);
@@ -383,8 +387,8 @@ function trierStat(stat) {
     // Filtrer les clés qui ont un libellé dans tempLib et les convertir en libellés
     let sortedLibelles = entries
         .filter(entry => tempLib.hasOwnProperty(entry[0])) // Garde seulement les clés présentes dans tempLib
-        .map(entry => tempLib[entry[0]]); // Remplace par les libellés
+        .map(entry => `- ${tempLib[entry[0]]}`); // Formate chaque libellé avec un tiret et un espace
 
-    // Joindre les libellés dans une chaîne de caractères
-    return sortedLibelles.join(", ");
+    // Joindre les libellés avec des sauts de ligne
+    return `${sortedLibelles.join("\n")}`;
 }
