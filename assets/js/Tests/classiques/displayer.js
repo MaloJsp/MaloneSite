@@ -187,7 +187,7 @@ function verifRep(){
         tabCheck[count]= rep.trim() == inputs[count].trim()
         count++
     });
-    colorError(tabCheck)
+    // colorError(tabCheck)
     displayGoodRep(tabCheck)
     
     localStorage.setItem("chk",tabCheck)
