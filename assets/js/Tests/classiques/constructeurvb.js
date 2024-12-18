@@ -1274,6 +1274,7 @@ window.onload = () => {
     //     });
     //     testPopup()
     // }
+    
     localStorage.setItem("temps",document.getElementById("exo").classList[0])
     if (document.getElementById("exo").classList[1] != undefined) {
         localStorage.setItem("isFinal",true)
@@ -1318,7 +1319,7 @@ function getConj(vb,tp,prsn){
     }else if (tp == "pc" || tp == "pqp") {
         conj = getAux(vb.pp_id,prsn,tp) + " " + vb.pp 
         if(prsn>=3 && vb.pp_id == 1){conj += "s"}
-        console.log(conj, "  ",prsn,"  ",vb.pp_id)
+        
     }
     else{
         term = getTerminaison(tp,vb.grp,prsn)

@@ -100,7 +100,7 @@ function displayBtn(){
         }
         for (let index = 1; index < nbq +1 ; index++) {
             inp = document.getElementById(index)
-            console.log("INPP: ",inp)
+            
             tab[index-1]=inp.value
         }
         localStorage.setItem("reponses",JSON.stringify(tab))
@@ -183,9 +183,8 @@ function verifRep(){
         tabCheck[count]= rep.trim() == inputs[count].trim()
         count++
     });
-    // colorError(tabCheck)
+    colorError(tabCheck)
     displayGoodRep(tabCheck)
-    
     localStorage.setItem("chk",tabCheck)
     if (localStorage.temps == "all"){
         displayModal(calcStat(tabCheck))
@@ -243,7 +242,7 @@ function colorError(tabCheck){
     }    for (let index = 0; index < nbq ; index++) {
         bal = document.getElementById(index +1)
         
-        bal.disabled = true
+        // bal.disabled = true
         if (tabCheck[index]) {
             bal.style.color = "green"
         }else{
@@ -278,6 +277,7 @@ function displayGoodRep(chk){
 
 function displayModal(stat){
         let rPann = ""
+
         if (!JSON.parse(localStorage.isFinal)) {
             rPann = `
             <div class="right-panel">
@@ -375,8 +375,23 @@ function displayModal(stat){
         span.onclick = function() {
             mod.style.display = "none";
           }
+          remplirInputsAvecTableau(JSON.parse(localStorage.getItem("reponses")))
 }
 
+function remplirInputsAvecTableau(tableau) {
+    // Parcourt le tableau
+    tableau.forEach((element, index) => {
+        // Récupère l'élément input avec l'id correspondant à l'index
+        const inputElement = document.getElementById(index+1);
+        
+        // Vérifie si l'élément existe avant d'insérer la valeur
+        if (inputElement) {
+            inputElement.value = element;
+        } else {
+            console.warn(`Aucun élément input trouvé avec l'id : ${index}`);
+        }
+    });
+}
 
 
 function trierStat(stat) {
