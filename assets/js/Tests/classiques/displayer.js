@@ -100,6 +100,7 @@ function displayBtn(){
         }
         for (let index = 1; index < nbq +1 ; index++) {
             inp = document.getElementById(index)
+            console.log("INPP: ",inp)
             tab[index-1]=inp.value
         }
         localStorage.setItem("reponses",JSON.stringify(tab))
