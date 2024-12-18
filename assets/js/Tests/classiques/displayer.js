@@ -104,6 +104,7 @@ function displayBtn(){
         }
         localStorage.setItem("reponses",JSON.stringify(tab))
         verifRep()
+        console.log(document.getElementById(1).value)
     }
 }
 
