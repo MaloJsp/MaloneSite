@@ -378,6 +378,18 @@ function displayModal(stat){
           }
 }
 
+const tempLib = {
+    "present": "Présent",
+    "imparfait": "Imparfait",
+    "passe": "Passé simple",
+    "futur": "Futur",
+    "conditionnel": "Conditionnel",
+    "imperatif": "Impératif",
+    "pc": "Passé composé",
+    "pqp": "Plus que parfait"
+};
+
+// Fonction pour trier et récupérer les libellés sous forme de liste à puces (texte brut)
 function trierStat(stat) {
     // Convertir l'objet en tableau de paires [clé, valeur]
     let entries = Object.entries(stat);
@@ -388,8 +400,8 @@ function trierStat(stat) {
     // Filtrer les clés qui ont un libellé dans tempLib et les convertir en libellés
     let sortedLibelles = entries
         .filter(entry => tempLib.hasOwnProperty(entry[0])) // Garde seulement les clés présentes dans tempLib
-        .map(entry => tempLib[entry[0]]); // Remplace par les libellés
+        .map(entry => `- ${tempLib[entry[0]]}`); // Formate chaque libellé avec un tiret et un espace
 
-    // Joindre les libellés dans une chaîne de caractères
-    return sortedLibelles.join(", ");
+    // Joindre les libellés avec des sauts de ligne
+    return sortedLibelles.join("\n");
 }
