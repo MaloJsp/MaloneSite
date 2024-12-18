@@ -6,7 +6,7 @@ const tempLib = {
     "conditionnel": "Conditionnel",
     "imperatif": "Imperatif",
     "pc": "Passé composé",
-    "pqp": "Plus que parfait"
+    "pqp": "Plus-que-parfait"
 }
 //Recupère la balise ou on insere le tests
 function getMainBal(){
@@ -282,7 +282,7 @@ function displayModal(stat){
             rPann = `
             <div class="right-panel">
                 <p>Phrase petit bateau</p>
-                <div> ${trierStat(stat)} </div>
+                   ${genererListeAvecTirets(trierStat(stat))}
             </div>
             `
         }
@@ -315,6 +315,7 @@ function displayModal(stat){
     .modal {
         display: none; /* Hidden by default */
         position: fixed; /* Stay in place */
+
         z-index: 1; /* Sit on top */
         left: 0;
         top: 0;
@@ -327,9 +328,11 @@ function displayModal(stat){
       
       /* Modal Content/Box */
       .modal-content {
-      color: black;
+              border-radius: 15px; /* Ajuste la valeur pour plus ou moins d'arrondi */
+
+      color: white;
           display: flex;
-        background-color: #fefefe;
+        background-color:rgb(24, 24, 34);
         margin: 5% auto; /* 15% from the top and centered */
         padding: 20px;
         border: 1px solid #888;
@@ -376,7 +379,6 @@ function displayModal(stat){
 
 
 
-// Fonction pour trier et récupérer les libellés sous forme de liste à puces (texte brut avec interpolation)
 function trierStat(stat) {
     // Convertir l'objet en tableau de paires [clé, valeur]
     let entries = Object.entries(stat);
@@ -387,8 +389,13 @@ function trierStat(stat) {
     // Filtrer les clés qui ont un libellé dans tempLib et les convertir en libellés
     let sortedLibelles = entries
         .filter(entry => tempLib.hasOwnProperty(entry[0])) // Garde seulement les clés présentes dans tempLib
-        .map(entry => `- ${tempLib[entry[0]]}`); // Formate chaque libellé avec un tiret et un espace
+        .map(entry => tempLib[entry[0]]); // Récupère le libellé correspondant
 
-    // Joindre les libellés avec des sauts de ligne
-    return `${sortedLibelles.join("\n")}`;
+    return sortedLibelles; // Retourne le tableau de libellés triés
+}
+
+// Fonction pour générer une liste HTML à partir du tableau de libellés
+function genererListeAvecTirets(libelles) {
+    // Générer une liste avec un tiret devant chaque libellé
+    return libelles.map((libelle, index) => `${index + 1}) ${libelle}`).join("<br>");
 }
