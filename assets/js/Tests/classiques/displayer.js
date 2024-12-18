@@ -381,7 +381,7 @@ function displayModal(stat){
 
 
 
-// Fonction pour trier et récupérer les libellés sous forme de liste à puces (texte brut)
+// Fonction pour trier et récupérer les libellés sous forme de liste à puces (texte brut avec interpolation)
 function trierStat(stat) {
     // Convertir l'objet en tableau de paires [clé, valeur]
     let entries = Object.entries(stat);
@@ -395,5 +395,5 @@ function trierStat(stat) {
         .map(entry => `- ${tempLib[entry[0]]}`); // Formate chaque libellé avec un tiret et un espace
 
     // Joindre les libellés avec des sauts de ligne
-    return sortedLibelles.join("\n");
+    return `${sortedLibelles.join("\n")}`;
 }
