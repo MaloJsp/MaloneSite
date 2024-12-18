@@ -378,16 +378,7 @@ function displayModal(stat){
           }
 }
 
-const tempLib = {
-    "present": "Présent",
-    "imparfait": "Imparfait",
-    "passe": "Passé simple",
-    "futur": "Futur",
-    "conditionnel": "Conditionnel",
-    "imperatif": "Impératif",
-    "pc": "Passé composé",
-    "pqp": "Plus que parfait"
-};
+
 
 // Fonction pour trier et récupérer les libellés sous forme de liste à puces (texte brut)
 function trierStat(stat) {
